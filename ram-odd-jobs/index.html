@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ram Odd Jobs &amp; More | Local and family owned, Lubbock</title>
+<meta name="description" content="Yard maintenance, construction cleaning, move-out and get-ready cleaning, haul off and more. No job too small. Lubbock and surrounding areas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ---------- tokens (filled from site config) ---------- */
+:root{
+  --primary:#B0412E;
+  --accent:#F5C542;
+  --bg:#F5EFEA;
+  --ink:#1E1614;
+  --card:#FFFFFF;
+  --font-head:"Barlow Condensed", Impact, sans-serif;
+  --font-body:"Source Sans 3", system-ui, sans-serif;
+  --w-head:700;
+  --w-body:400;
+  --max:1180px;
+  --gutter:clamp(16px, 4vw, 48px);
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-body);font-weight:var(--w-body);
+  color:var(--ink);background:var(--bg);line-height:1.55;font-size:17px;
+  transition:background .5s var(--ease), color .5s var(--ease);
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;letter-spacing:-.01em}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.btn{
+  display:inline-flex;align-items:center;gap:.5em;
+  font-family:var(--font-head);font-weight:var(--w-head);font-size:1.15rem;letter-spacing:.02em;
+  padding:.75em 1.4em;border-radius:4px;text-decoration:none;border:2px solid transparent;
+  transition:transform .25s var(--ease), background .3s, color .3s, border-color .3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn-ghost:hover{border-color:#fff}
+.btn-ink{background:var(--ink);color:var(--bg)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* ---------- photo slots: real photo or a labeled placeholder ---------- */
+.photo{position:relative;overflow:hidden;background:color-mix(in srgb, var(--primary) 85%, #000)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.ph{
+  width:100%;height:100%;display:grid;place-items:center;color:rgba(255,255,255,.75);
+  font-family:var(--font-head);font-size:1.1rem;letter-spacing:.05em;
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 14px, transparent 14px 28px),
+    linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 35%, #000));
+}
+.ph span{border:1px dashed rgba(255,255,255,.5);padding:.4em .9em;border-radius:3px}
+
+/* ---------- header ---------- */
+.site-head{
+  position:sticky;top:0;z-index:50;background:var(--card);
+  box-shadow:0 1px 0 rgba(0,0,0,.08);
+  transform:translateY(-100%);animation:dropIn .7s var(--ease) .1s forwards;
+}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:76px;transition:height .3s var(--ease)}
+.site-head.shrunk .wrap{height:60px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--font-head);font-weight:var(--w-head);font-size:1.5rem;line-height:1}
+.brand .mark{width:34px;height:34px;border-radius:6px;background:var(--primary);display:grid;place-items:center;color:#fff;font-size:1.1rem;transform:rotate(-6deg)}
+.brand small{display:block;font-family:var(--font-body);font-weight:600;font-size:.7rem;letter-spacing:.06em;opacity:.65;margin-top:.2em}
+.nav{display:flex;gap:1.6rem;font-weight:600;font-size:.95rem}
+.nav a{text-decoration:none;opacity:.8;position:relative}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:2px;background:var(--accent);transition:right .3s var(--ease)}
+.nav a:hover{opacity:1}.nav a:hover::after{right:0}
+.call{position:relative;white-space:nowrap}
+.call::before{
+  content:"";position:absolute;inset:-2px;border-radius:6px;border:2px solid var(--primary);
+  animation:ring 1.6s var(--ease) 1.2s 2;opacity:0;
+}
+@media (max-width:820px){.nav{display:none}.brand{font-size:1.25rem}.call{font-size:1rem;padding:.6em 1em}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:min(88vh, 760px);display:flex;align-items:flex-end;color:#fff;isolation:isolate;overflow:hidden}
+.hero .photo{position:absolute;inset:0;z-index:-2}
+.hero .photo img,.hero .photo .ph{animation:kenburns 22s ease-in-out infinite alternate}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg, rgba(0,0,0,.05) 0%, rgba(0,0,0,.25) 40%, rgba(0,0,0,.78) 100%);
+}
+.hero .wrap{padding-top:18vh;padding-bottom:clamp(48px, 9vw, 110px);width:100%}
+.hero h1{font-size:clamp(2.8rem, 8vw, 6.4rem);max-width:18ch}
+.hero h1 .line{display:block;overflow:hidden}
+.hero h1 .line span{display:block;transform:translateY(110%);animation:rise .9s var(--ease) forwards}
+.hero h1 .line:nth-child(2) span{animation-delay:.12s}
+.hero h1 .line:nth-child(3) span{animation-delay:.24s}
+.hero h1 .line:nth-child(4) span{animation-delay:.36s}
+.hero p{font-size:clamp(1.05rem, 1.6vw, 1.35rem);max-width:46ch;margin:1.2rem 0 1.8rem;opacity:0;animation:fade .8s var(--ease) .55s forwards}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem;opacity:0;animation:fade .8s var(--ease) .7s forwards}
+.hero .area{position:absolute;right:var(--gutter);bottom:1.4rem;font-size:.85rem;opacity:.8;font-weight:600}
+@media (max-width:820px){.hero .area{display:none}}
+
+/* the slanted seam between hero and the rest */
+.seam{height:64px;background:var(--bg);clip-path:polygon(0 60%, 100% 0, 100% 100%, 0 100%);margin-top:-64px;position:relative;z-index:1}
+
+/* ---------- trust ---------- */
+.trust{padding:clamp(40px, 7vw, 96px) 0}
+.trust .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px, 5vw, 72px);align-items:center}
+.trust h2{font-size:clamp(2rem, 4.5vw, 3.4rem);max-width:14ch;margin-bottom:1rem}
+.stats{display:flex;gap:2.2rem;flex-wrap:wrap;margin:1.6rem 0}
+.stat b{font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(2.4rem, 5vw, 3.6rem);line-height:1;color:var(--primary);display:block}
+.stat span{font-size:.9rem;font-weight:600;opacity:.7}
+.bullets{list-style:none;display:grid;gap:.55rem;margin:1rem 0 1.6rem}
+.bullets li{padding-left:1.6rem;position:relative}
+.bullets li::before{content:"";position:absolute;left:0;top:.55em;width:.9em;height:.9em;background:var(--accent);clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%, 30% 50%)}
+.trust .photo{aspect-ratio:4/5;border-radius:6px;transform:rotate(1.5deg);box-shadow:14px 14px 0 var(--accent)}
+.trust figcaption{margin-top:1.2rem;font-weight:600;font-size:.95rem;opacity:.75;text-align:right}
+.free{display:inline-block;background:var(--accent);color:var(--ink);font-family:var(--font-head);font-weight:var(--w-head);font-size:1.1rem;padding:.35em .8em;transform:rotate(-2deg);margin-bottom:1rem}
+@media (max-width:820px){.trust .wrap{grid-template-columns:1fr}.trust .photo{max-width:420px;aspect-ratio:4/3}}
+
+/* ---------- reviews band ---------- */
+.reviews{position:relative;color:#fff;padding:clamp(48px, 7vw, 96px) 0;overflow:hidden}
+.reviews::before{
+  content:"";position:absolute;inset:-40% -20%;z-index:-1;
+  background:linear-gradient(115deg, var(--primary) 0%, var(--primary) 45%, var(--accent) 100%);
+  background-size:220% 220%;animation:drift 16s ease-in-out infinite alternate;
+}
+.reviews h2{font-size:clamp(2rem, 4.5vw, 3.4rem);text-align:center;margin-bottom:2rem}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.2rem}
+.review{background:var(--card);color:var(--ink);padding:1.6rem 1.6rem 1.4rem;border-radius:6px;position:relative;transform:translateY(24px);opacity:0;transition:transform .7s var(--ease), opacity .7s var(--ease)}
+.review::before{content:"\201C";position:absolute;top:-.1em;left:.6rem;font-family:var(--font-head);font-size:5rem;line-height:1;color:var(--accent);opacity:.9}
+.review p{padding-top:1.2rem;font-size:1.05rem}
+.review footer{margin-top:1rem;font-weight:700;font-size:.9rem}
+.review footer span{font-weight:400;opacity:.6}
+.reviews .in .review{transform:none;opacity:1}
+.reviews .in .review:nth-child(2){transition-delay:.12s}.reviews .in .review:nth-child(3){transition-delay:.24s}
+.reviews .more{text-align:center;margin-top:2rem}
+
+/* ---------- services ---------- */
+.services{padding:clamp(48px, 7vw, 96px) 0}
+.services h2{font-size:clamp(2rem, 4.5vw, 3.4rem);margin-bottom:1.8rem}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1.4rem}
+.svc{background:var(--card);border-radius:6px;overflow:hidden;transform:translateY(30px);opacity:0;transition:transform .7s var(--ease), opacity .7s var(--ease)}
+.svc .photo{aspect-ratio:4/3}
+.svc .photo img,.svc .photo .ph{transition:transform .8s var(--ease)}
+.svc:hover .photo img,.svc:hover .photo .ph{transform:scale(1.06)}
+.svc .body{padding:1.2rem 1.3rem 1.5rem}
+.svc h3{font-size:1.8rem;margin-bottom:.5rem}
+.svc h3::after{content:"";display:block;width:2.2em;height:3px;background:var(--accent);margin-top:.35em}
+.services .in .svc{transform:none;opacity:1}
+.services .in .svc:nth-child(2){transition-delay:.1s}.services .in .svc:nth-child(3){transition-delay:.2s}.services .in .svc:nth-child(4){transition-delay:.3s}
+
+/* ---------- feature (before/after or single photo) ---------- */
+.feature{padding:0 0 clamp(48px, 7vw, 96px)}
+.feature .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px, 5vw, 64px);align-items:center}
+.feature h2{font-size:clamp(2rem, 4.5vw, 3.2rem);margin-bottom:1rem}
+.ba{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;user-select:none;touch-action:none;background:#000}
+.ba .photo{position:absolute;inset:0}
+.ba .after{clip-path:inset(0 0 0 var(--cut, 50%))}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--cut, 50%);width:3px;background:#fff;transform:translateX(-50%);box-shadow:0 0 0 1px rgba(0,0,0,.2)}
+.ba .handle i{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-style:normal;font-weight:700;color:var(--ink);box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.ba .tag{position:absolute;bottom:.8rem;font-family:var(--font-head);font-size:1rem;letter-spacing:.06em;padding:.3em .7em;background:rgba(0,0,0,.6);color:#fff;border-radius:3px}
+.ba .tag.l{left:.8rem}.ba .tag.r{right:.8rem}
+.feature .single{aspect-ratio:4/3;border-radius:6px}
+@media (max-width:820px){.feature .wrap{grid-template-columns:1fr}}
+
+/* ---------- contact strip ---------- */
+.contact{background:var(--card);padding:clamp(40px, 6vw, 72px) 0;border-top:6px solid var(--primary)}
+.contact .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem;align-items:start}
+.contact h3{font-size:1.5rem;margin-bottom:.6rem}
+.contact .big{font-family:var(--font-head);font-weight:var(--w-head);font-size:clamp(1.8rem, 3vw, 2.4rem);text-decoration:none;color:var(--primary);display:inline-block;line-height:1}
+.hours{list-style:none;display:grid;gap:.3rem}
+.hours li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed rgba(0,0,0,.15);padding:.25rem 0;font-size:.95rem}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.badge{border:2px solid var(--ink);padding:.3em .7em;font-weight:700;font-size:.8rem;border-radius:3px;transform:rotate(-1deg)}
+.badge:nth-child(2n){transform:rotate(1.2deg)}
+@media (max-width:820px){.contact .wrap{grid-template-columns:1fr}}
+.foot{padding:1.4rem 0;font-size:.85rem;opacity:.65;text-align:center}
+
+/* ---------- reveal helper ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease), transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- demo theme switcher ---------- */
+.themer{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--ink);color:var(--bg);border-radius:999px;padding:.5rem .6rem .5rem .9rem;display:flex;align-items:center;gap:.6rem;box-shadow:0 10px 30px rgba(0,0,0,.3);font-size:.8rem;font-weight:700}
+.themer button{width:26px;height:26px;border-radius:50%;border:2px solid transparent;cursor:pointer;background:var(--sw);transition:transform .2s var(--ease)}
+.themer button:hover{transform:scale(1.15)}
+.themer button[aria-pressed="true"]{border-color:var(--bg)}
+.wm{position:fixed;left:12px;bottom:12px;z-index:60;font-size:.7rem;opacity:.55;pointer-events:none}
+
+/* ---------- motion ---------- */
+@keyframes rise{to{transform:none}}
+@keyframes fade{to{opacity:1}}
+@keyframes dropIn{to{transform:none}}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+@keyframes drift{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes ring{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.5)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .site-head{transform:none}.hero h1 .line span,.hero p,.hero .ctas{transform:none;opacity:1}
+  .rv,.review,.svc{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+
+
+<header class="site-head" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark">R</span>
+      <span>Ram Odd Jobs &amp; More<small>Local and family owned, Lubbock</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a><a href="#reviews">Reviews</a><a href="#services">Services</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-primary call" href="tel:8068311097">806-831-1097</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="photo ">
+  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/870487476_122121348483452124_1860080976130349291_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=dgs8-QWKHgwQ7kNvwHxQZLZ&amp;_nc_oc=AdpDYdAZBP_j-_KqOdROrD_Wcgf87dH8rwZp6pik4tLAeDpp2L7o1_2Pkqg208TzvEw&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=g2zSX0CWVQxRV5-VSTkSMA&amp;_nc_ss=792a8&amp;oh=00_AQMHlIPIGJIBP3ccqh4Lsd4jbWLQfipZpF-kMJbX00yb9w&amp;oe=6AE58522" alt="hero, their best job or their truck" loading="lazy">
+</div>
+  <div class="wrap">
+    <h1><span class="line"><span>A little work makes</span></span><span class="line"><span>a big difference</span></span></h1>
+    <p>Yard maintenance, construction cleaning, move-out and get-ready cleaning, haul off and more. No job too small.</p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="#contact">Get a free quote</a>
+      <a class="btn btn-ghost" href="tel:8068311097">Call 806-831-1097</a>
+    </div>
+  </div>
+  <div class="area">Lubbock and surrounding areas</div>
+</section>
+<div class="seam"></div>
+
+<section class="trust" id="about">
+  <div class="wrap">
+    <div class="rv">
+      <span class="free">Free quotes</span>
+      <h2>Helping hands for your property</h2>
+      
+      <ul class="bullets"><li>Local and family owned</li><li>Residential and commercial properties</li><li>Routine maintenance, repairs, cleanups and odd jobs</li><li>Two numbers, one call back</li></ul>
+      <a class="btn btn-ink" href="tel:8068311097">Call 806-831-1097</a>
+    </div>
+    <figure class="rv">
+      <div class="photo ">
+  <img src="https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/864871912_122121348495452124_7973598187016588169_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=109&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=dDDqIt7hRA4Q7kNvwEqgYL1&amp;_nc_oc=AdpZHYnFylre9F7ErN2UKQ-M7LThuEwqArJrmp6QuQqKrj_oRYALYgBc-2Vg6tqEotU&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-2.xx&amp;_nc_gid=g2zSX0CWVQxRV5-VSTkSMA&amp;_nc_ss=792a8&amp;oh=00_AQOi6DKvD1eaQumbktVH8XL6PqqQrKBmdN_nwASvumLWKA&amp;oe=6AE555C3" alt="owner with the truck" loading="lazy">
+</div>
+      <figcaption>Ram Odd Jobs, on the job</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <h2>What customers say</h2>
+    <div class="rgrid">
+      
+      <article class="review"><p>Your Google and Facebook reviews go here, word for word. Customers trust other customers more than any ad.</p><footer>Your reviews <span>pulled in automatically</span></footer></article>
+      <article class="review"><p>Every new 5-star review shows up on the site within a day. No logging in, no copy-pasting.</p><footer>Always current <span>no upkeep</span></footer></article>
+      
+    </div>
+    
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <h2 class="rv">What we do</h2>
+    <div class="sgrid">
+      
+      <article class="svc">
+        <div class="photo ">
+  <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/867530162_122121348891452124_6395257687589117082_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=8vlBQPRkfvAQ7kNvwG3PdMX&amp;_nc_oc=AdrLIHPau3a0InEwddgTlxgim9SBKzvp9wyCOyzYgXkSI_Pu3UcR-cpauxCagg6yo4o&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-2.xx&amp;_nc_gid=g2zSX0CWVQxRV5-VSTkSMA&amp;_nc_ss=792a8&amp;oh=00_AQNL6xvo4HvobHQP9RM4ICxOatQaPl320k2CsiRFx64RcA&amp;oe=6AE577CA" alt="Property maintenance job photo" loading="lazy">
+</div>
+        <div class="body"><h3>Property maintenance</h3><p>Keep it looking its best, week after week.</p></div>
+      </article>
+      
+      <article class="svc">
+        <div class="photo ">
+  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/867486998_122121348903452124_7150127752020226981_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=OT0EAAWLZzsQ7kNvwHKTx2z&amp;_nc_oc=AdooSWe09uO3HB6PzPvKagZI3Wa4whjFvVjexaYE0onLqT6_Qzbbyf0duXjJOHjA97U&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=g2zSX0CWVQxRV5-VSTkSMA&amp;_nc_ss=792a8&amp;oh=00_AQOXOKQQ-jxCL2E1AIkFuUBQewWu-3N-NU-ldOgMqrInhg&amp;oe=6AE578DB" alt="Cleanups and haul off job photo" loading="lazy">
+</div>
+        <div class="body"><h3>Cleanups and haul off</h3><p>Before and afters that speak for themselves.</p></div>
+      </article>
+      
+      <article class="svc">
+        <div class="photo ">
+  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/861383565_122121348657452124_7847620313044612472_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=vwORjnPjk_AQ7kNvwG4NxxL&amp;_nc_oc=AdoZyPTt0pxLVJTEIZx3sfWHDa3pdIdlPIjp4TtY_pzQYWqdAegBOdDgjx7cHBHwuww&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=g2zSX0CWVQxRV5-VSTkSMA&amp;_nc_ss=792a8&amp;oh=00_AQPlY_cLaj9VTkYZwGC4Gz6tj4LNE_gb6-3uEQWPenezaw&amp;oe=6AE5818F" alt="Move-out and get-ready job photo" loading="lazy">
+</div>
+        <div class="body"><h3>Move-out and get-ready</h3><p>Rentals turned fast.</p></div>
+      </article>
+      
+      <article class="svc">
+        <div class="photo ">
+  <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/861301349_122121348879452124_2687273476397810775_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=rUcP_0EfuWwQ7kNvwE-KZKf&amp;_nc_oc=AdrilC8Lv5CZdv5Zu0kMJmkc8LgHzg3F-J6J0rAEyhtDjLWlL4FgQ-YdBGEPqA9iucA&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-2.xx&amp;_nc_gid=g2zSX0CWVQxRV5-VSTkSMA&amp;_nc_ss=792a8&amp;oh=00_AQN8ricoQ-j5JNk6P9H92qlDG2orkVbPnfb29tYbLVnnaQ&amp;oe=6AE56247" alt="Odd jobs and repairs job photo" loading="lazy">
+</div>
+        <div class="body"><h3>Odd jobs and repairs</h3><p>The list you never get to. We get to it.</p></div>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="feature">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Before and after</h2>
+      <p>Drag the handle. Property maintenance done last week.</p>
+    </div>
+    
+    <div class="ba rv" id="ba" style="--cut:50%">
+      <div class="photo before">
+  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/870487476_122121348483452124_1860080976130349291_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=dgs8-QWKHgwQ7kNvwHxQZLZ&amp;_nc_oc=AdpDYdAZBP_j-_KqOdROrD_Wcgf87dH8rwZp6pik4tLAeDpp2L7o1_2Pkqg208TzvEw&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=g2zSX0CWVQxRV5-VSTkSMA&amp;_nc_ss=792a8&amp;oh=00_AQMHlIPIGJIBP3ccqh4Lsd4jbWLQfipZpF-kMJbX00yb9w&amp;oe=6AE58522" alt="before" loading="lazy">
+</div>
+      <div class="photo after">
+  <img src="https://scontent-dfw6-2.xx.fbcdn.net/v/t39.30808-6/864871912_122121348495452124_7973598187016588169_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=109&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=dDDqIt7hRA4Q7kNvwEqgYL1&amp;_nc_oc=AdpZHYnFylre9F7ErN2UKQ-M7LThuEwqArJrmp6QuQqKrj_oRYALYgBc-2Vg6tqEotU&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-2.xx&amp;_nc_gid=g2zSX0CWVQxRV5-VSTkSMA&amp;_nc_ss=792a8&amp;oh=00_AQOi6DKvD1eaQumbktVH8XL6PqqQrKBmdN_nwASvumLWKA&amp;oe=6AE555C3" alt="after" loading="lazy">
+</div>
+      <span class="tag l">Before</span><span class="tag r">After</span>
+      <div class="handle"><i>&#8596;</i></div>
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <h3>Ram Odd Jobs &amp; More</h3>
+      <a class="big" href="tel:8068311097">806-831-1097</a>
+      <p style="margin-top:.6rem">Lubbock, TX</p>
+      
+      <div class="badges"><span class="badge">Family owned</span><span class="badge">Lubbock</span><span class="badge">Free quotes</span></div>
+    </div>
+    <div class="rv">
+      <h3>Hours</h3>
+      <ul class="hours"><li><span>Mon to Fri</span><span>Call or text, 8am to 6pm</span></li><li><span>Sat</span><span>By appointment</span></li><li><span>Sun</span><span>Closed</span></li></ul>
+    </div>
+    <div class="rv">
+      <h3>Get a free estimate</h3>
+      <p>Text or call with what you need and a couple photos. You'll hear back the same day.</p>
+      <p style="margin-top:1rem"><a class="btn btn-primary" href="sms:8068311097">Text 806-831-1097</a></p>
+    </div>
+  </div>
+</section>
+<p class="foot">&copy; 2026 Ram Odd Jobs &amp; More. Lubbock and surrounding areas.</p>
+
+
+<div class="themer" aria-label="Try another color">
+  <span>Colors</span>
+  <button type="button" data-theme="brick" title="brick" style="--sw:linear-gradient(135deg, #B0412E 50%, #F5C542 50%)" aria-pressed="true"></button><button type="button" data-theme="timber" title="timber" style="--sw:linear-gradient(135deg, #4A3728 50%, #F0B429 50%)" aria-pressed="false"></button><button type="button" data-theme="forest" title="forest" style="--sw:linear-gradient(135deg, #1E4D3A 50%, #D98B2B 50%)" aria-pressed="false"></button>
+</div>
+
+<div class="wm">Demo built by Simply AI Solutions for Ram Odd Jobs &amp; More</div>
+
+<script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const palettes = {"brick": {"accent": "#F5C542", "bg": "#F5EFEA", "card": "#FFFFFF", "ink": "#1E1614", "primary": "#B0412E"}, "forest": {"accent": "#D98B2B", "bg": "#EEF2EA", "card": "#FFFFFF", "ink": "#141C17", "primary": "#1E4D3A"}, "timber": {"accent": "#F0B429", "bg": "#F4EFE8", "card": "#FFFFFF", "ink": "#1B1511", "primary": "#4A3728"}};
+
+  // header shrink
+  const head = document.querySelector('.site-head');
+  addEventListener('scroll', () => head.classList.toggle('shrunk', scrollY > 80), {passive:true});
+
+  // reveal on scroll, once
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in'); io.unobserve(e.target);
+    e.target.querySelectorAll('[data-count]').forEach(count);
+  }), {threshold:.18});
+  document.querySelectorAll('.rv, .reviews .wrap, .services .wrap').forEach(el => io.observe(el));
+
+  function count(el){
+    const end = +el.dataset.count, dur = 1400, t0 = performance.now();
+    if (reduce) { el.textContent = fmt(end); return; }
+    (function tick(t){
+      const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(Math.round(end * e));
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+  function fmt(n){ return n.toLocaleString() + (n >= 1000 ? '+' : ''); }
+
+  // before / after slider
+  const ba = document.getElementById('ba');
+  if (ba) {
+    const set = x => { const r = ba.getBoundingClientRect(); ba.style.setProperty('--cut', Math.max(4, Math.min(96, (x - r.left) / r.width * 100)) + '%'); };
+    let down = false;
+    ba.addEventListener('pointerdown', e => { down = true; set(e.clientX); });
+    addEventListener('pointermove', e => down && set(e.clientX));
+    addEventListener('pointerup', () => down = false);
+  }
+
+  // theme switcher (demo only): swaps the CSS tokens live
+  document.querySelectorAll('.themer button').forEach(btn => btn.addEventListener('click', () => {
+    const p = palettes[btn.dataset.theme]; if (!p) return;
+    for (const k in p) document.documentElement.style.setProperty('--' + k, p[k]);
+    document.querySelectorAll('.themer button').forEach(b => b.setAttribute('aria-pressed', b === btn));
+  }));
+})();
+</script>
+</body>
+</html>
