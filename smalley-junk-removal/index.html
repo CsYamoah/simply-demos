@@ -58,7 +58,11 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 14px, transparent 14px 28px),
     linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 35%, #000));
 }
-.ph span{border:1px dashed rgba(255,255,255,.5);padding:.4em .9em;border-radius:3px}
+.ph span{display:none}
+/* a photo that failed to load becomes a quiet brand panel instead of a broken icon */
+.photo.noimg{background:
+    radial-gradient(120% 90% at 20% 10%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 60%),
+    linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 30%, #000))}
 
 /* ---------- header ---------- */
 .site-head{
@@ -222,8 +226,8 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
 </header>
 
 <section class="hero">
-  <div class="photo ">
-  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/859867450_29011392635167304_7713210561263853243_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=i3x3DaO-8NEQ7kNvwHZufK0&amp;_nc_oc=AdqFef4k5yuMoSANvDSzPDziW29fHwbEcec7VX7baCV-lPlmORufpznm0T7LBueT1Eg&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQM8_Xro1jB9KtsFQWtKNc6ZxFKOECCt6K6j4LpRu-zsaQ&amp;oe=6AE5855E" alt="hero, their best job or their truck" loading="lazy">
+  <div class="photo hero-photo">
+  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/859867450_29011392635167304_7713210561263853243_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=i3x3DaO-8NEQ7kNvwHZufK0&amp;_nc_oc=AdqFef4k5yuMoSANvDSzPDziW29fHwbEcec7VX7baCV-lPlmORufpznm0T7LBueT1Eg&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQM8_Xro1jB9KtsFQWtKNc6ZxFKOECCt6K6j4LpRu-zsaQ&amp;oe=6AE5855E" alt=""  onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
   <div class="wrap">
     <h1><span class="line"><span>Take your space back</span></span></h1>
@@ -250,7 +254,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     </div>
     <figure class="rv">
       <div class="photo ">
-  <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/863357430_29011393251833909_6994781571423432224_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=WBPMoObDETYQ7kNvwGU1QJG&amp;_nc_oc=Adr-Iv2E1YQzULhOPbEPy5y_qeQdwuNra-ZjdHymMt5BD-GDd7_tmofG-cpCa1o09PM&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-2.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQPsPed7WvsU4OQZ7WpzjWO3mvKJkvwtWHjYLGqTRVuoeA&amp;oe=6AE58044" alt="owner with the truck" loading="lazy">
+  <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/863357430_29011393251833909_6994781571423432224_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=WBPMoObDETYQ7kNvwGU1QJG&amp;_nc_oc=Adr-Iv2E1YQzULhOPbEPy5y_qeQdwuNra-ZjdHymMt5BD-GDd7_tmofG-cpCa1o09PM&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-2.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQPsPed7WvsU4OQZ7WpzjWO3mvKJkvwtWHjYLGqTRVuoeA&amp;oe=6AE58044" alt="" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
       <figcaption>Robert Smalley, on the job</figcaption>
     </figure>
@@ -277,28 +281,28 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
       
       <article class="svc">
         <div class="photo ">
-  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/861236855_29011394038500497_1325754590789049781_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=N5Imu5WObdUQ7kNvwFj-keh&amp;_nc_oc=AdrLSE1jThfziAyDB0YmK0Do8-VG6X2h-Z6DVQJOT3iVYQnvJSFMXIpvOApwM-0Zc7c&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQMhRqCSfNM9mi0ILW4wip856GpvExamKbtw8sWKsZzW7Q&amp;oe=6AE57DC2" alt="House clean outs job photo" loading="lazy">
+  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/861236855_29011394038500497_1325754590789049781_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=N5Imu5WObdUQ7kNvwFj-keh&amp;_nc_oc=AdrLSE1jThfziAyDB0YmK0Do8-VG6X2h-Z6DVQJOT3iVYQnvJSFMXIpvOApwM-0Zc7c&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQMhRqCSfNM9mi0ILW4wip856GpvExamKbtw8sWKsZzW7Q&amp;oe=6AE57DC2" alt="" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
         <div class="body"><h3>House clean outs</h3><p>Whole-house and move-out clean outs. We load, we haul, you keep the weekend.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/862620723_29011394645167103_5560852287847201104_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=kRr0-A5tkBsQ7kNvwGdsrMK&amp;_nc_oc=AdryoKvYZz6iwxlQa8rtE7tG0YEjCacfsyvfZVDJM9SqhbWcmvV026elsm4b1ES0eiI&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-2.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQPCaIkLLRV77ZK67XVQAUPUOK2XK-Acv1y-qRLwyMwFqA&amp;oe=6AE57DAC" alt="Garage and storage job photo" loading="lazy">
+  <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/862620723_29011394645167103_5560852287847201104_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=kRr0-A5tkBsQ7kNvwGdsrMK&amp;_nc_oc=AdryoKvYZz6iwxlQa8rtE7tG0YEjCacfsyvfZVDJM9SqhbWcmvV026elsm4b1ES0eiI&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-2.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQPCaIkLLRV77ZK67XVQAUPUOK2XK-Acv1y-qRLwyMwFqA&amp;oe=6AE57DAC" alt="" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
         <div class="body"><h3>Garage and storage</h3><p>Garages, sheds and storage units emptied in one trip.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/862045411_29011395235167044_3327079586127591240_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=IHiHUzACqgcQ7kNvwHf5wWg&amp;_nc_oc=AdoeiVi_x6g0KMCgBBUmwX8_tFnfcBl2Yk8XQgKvQVNRfemQUyLlyUAWy2yH7a-pWKE&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQNR9pUQKvReUgf-ibYlgs2tNFNugucsmQzP5G1JGlxB4A&amp;oe=6AE576D3" alt="Business cleanups job photo" loading="lazy">
+  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/862045411_29011395235167044_3327079586127591240_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=IHiHUzACqgcQ7kNvwHf5wWg&amp;_nc_oc=AdoeiVi_x6g0KMCgBBUmwX8_tFnfcBl2Yk8XQgKvQVNRfemQUyLlyUAWy2yH7a-pWKE&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQNR9pUQKvReUgf-ibYlgs2tNFNugucsmQzP5G1JGlxB4A&amp;oe=6AE576D3" alt="" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
         <div class="body"><h3>Business cleanups</h3><p>Offices, shops and rentals cleared out between tenants.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Single item pickup job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Single item pickup</h3><p>One couch, one fridge, one pile. No minimum.</p></div>
       </article>
@@ -316,7 +320,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     </div>
     
     <div class="photo single rv">
-  <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/863357430_29011393251833909_6994781571423432224_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=WBPMoObDETYQ7kNvwGU1QJG&amp;_nc_oc=Adr-Iv2E1YQzULhOPbEPy5y_qeQdwuNra-ZjdHymMt5BD-GDd7_tmofG-cpCa1o09PM&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-2.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQPsPed7WvsU4OQZ7WpzjWO3mvKJkvwtWHjYLGqTRVuoeA&amp;oe=6AE58044" alt="feature" loading="lazy">
+  <img src="https://scontent-dfw5-2.xx.fbcdn.net/v/t39.30808-6/863357430_29011393251833909_6994781571423432224_n.jpg?stp=cp6_dst-jpg_tt6&amp;cstp=mx1536x2048&amp;ctp=p960x960&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=aa7b47&amp;_nc_ohc=WBPMoObDETYQ7kNvwGU1QJG&amp;_nc_oc=Adr-Iv2E1YQzULhOPbEPy5y_qeQdwuNra-ZjdHymMt5BD-GDd7_tmofG-cpCa1o09PM&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-2.xx&amp;_nc_gid=eKiGeBbI-YmUr3dpr0tz1Q&amp;_nc_ss=7b2a8&amp;oh=00_AQPsPed7WvsU4OQZ7WpzjWO3mvKJkvwtWHjYLGqTRVuoeA&amp;oe=6AE58044" alt="" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
     
   </div>

@@ -58,7 +58,11 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 14px, transparent 14px 28px),
     linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 35%, #000));
 }
-.ph span{border:1px dashed rgba(255,255,255,.5);padding:.4em .9em;border-radius:3px}
+.ph span{display:none}
+/* a photo that failed to load becomes a quiet brand panel instead of a broken icon */
+.photo.noimg{background:
+    radial-gradient(120% 90% at 20% 10%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 60%),
+    linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 30%, #000))}
 
 /* ---------- header ---------- */
 .site-head{
@@ -222,8 +226,8 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
 </header>
 
 <section class="hero">
-  <div class="photo ">
-  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/862056960_122121850623422970_7204030706385646972_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1254x1254&amp;ctp=p960x960&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=Fai_0IVniGwQ7kNvwFZPdmn&amp;_nc_oc=AdoEoFC30jL1LjPg30R1yjWYM7jSe0mcadiWRvDOB-KMtT82IcJ-vdG989az1CwK6c0&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=Mg4B7gtY4yeY8wwtFDiJTQ&amp;_nc_ss=792a8&amp;oh=00_AQPdgzjhZEcMT_ix6JHaamscU8APphjorPNDgXefP5XUIA&amp;oe=6AE56F7F" alt="hero, their best job or their truck" loading="lazy">
+  <div class="photo hero-photo">
+  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/862056960_122121850623422970_7204030706385646972_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1254x1254&amp;ctp=p960x960&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=Fai_0IVniGwQ7kNvwFZPdmn&amp;_nc_oc=AdoEoFC30jL1LjPg30R1yjWYM7jSe0mcadiWRvDOB-KMtT82IcJ-vdG989az1CwK6c0&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=Mg4B7gtY4yeY8wwtFDiJTQ&amp;_nc_ss=792a8&amp;oh=00_AQPdgzjhZEcMT_ix6JHaamscU8APphjorPNDgXefP5XUIA&amp;oe=6AE56F7F" alt=""  onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
   <div class="wrap">
     <h1><span class="line"><span>Clean roofs, clean</span></span><span class="line"><span>driveways, clean</span></span><span class="line"><span>slate</span></span></h1>
@@ -248,7 +252,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     </div>
     <figure class="rv">
       <div class="photo ">
-  <div class="ph"><span>Photo: owner with the truck</span></div>
+  <div class="ph"></div>
 </div>
       <figcaption>Kaden Franklin, on the job</figcaption>
     </figure>
@@ -275,28 +279,28 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Commercial roofs job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Commercial roofs</h3><p>Flat and TPO roofs cleaned so drains stay clear and problems show early.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Driveways and patios job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Driveways and patios</h3><p>Concrete back to its real color.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: House wash job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>House wash</h3><p>Siding, gutters and brick, soft washed.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Roofing job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Roofing</h3><p>Repairs and replacement through Ridgeline Roofing.</p></div>
       </article>
@@ -314,7 +318,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     </div>
     
     <div class="photo single rv">
-  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/862056960_122121850623422970_7204030706385646972_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1254x1254&amp;ctp=p960x960&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=Fai_0IVniGwQ7kNvwFZPdmn&amp;_nc_oc=AdoEoFC30jL1LjPg30R1yjWYM7jSe0mcadiWRvDOB-KMtT82IcJ-vdG989az1CwK6c0&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=Mg4B7gtY4yeY8wwtFDiJTQ&amp;_nc_ss=792a8&amp;oh=00_AQPdgzjhZEcMT_ix6JHaamscU8APphjorPNDgXefP5XUIA&amp;oe=6AE56F7F" alt="feature" loading="lazy">
+  <img src="https://scontent-dfw6-1.xx.fbcdn.net/v/t39.30808-6/862056960_122121850623422970_7204030706385646972_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1254x1254&amp;ctp=p960x960&amp;_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=Fai_0IVniGwQ7kNvwFZPdmn&amp;_nc_oc=AdoEoFC30jL1LjPg30R1yjWYM7jSe0mcadiWRvDOB-KMtT82IcJ-vdG989az1CwK6c0&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw6-1.xx&amp;_nc_gid=Mg4B7gtY4yeY8wwtFDiJTQ&amp;_nc_ss=792a8&amp;oh=00_AQPdgzjhZEcMT_ix6JHaamscU8APphjorPNDgXefP5XUIA&amp;oe=6AE56F7F" alt="" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
     
   </div>

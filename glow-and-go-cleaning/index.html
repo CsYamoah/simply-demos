@@ -58,7 +58,11 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 14px, transparent 14px 28px),
     linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 35%, #000));
 }
-.ph span{border:1px dashed rgba(255,255,255,.5);padding:.4em .9em;border-radius:3px}
+.ph span{display:none}
+/* a photo that failed to load becomes a quiet brand panel instead of a broken icon */
+.photo.noimg{background:
+    radial-gradient(120% 90% at 20% 10%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 60%),
+    linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 30%, #000))}
 
 /* ---------- header ---------- */
 .site-head{
@@ -222,8 +226,8 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
 </header>
 
 <section class="hero">
-  <div class="photo ">
-  <div class="ph"><span>Photo: hero, their best job or their truck</span></div>
+  <div class="photo hero-photo">
+  <div class="ph"></div>
 </div>
   <div class="wrap">
     <h1><span class="line"><span>You make the</span></span><span class="line"><span>memories, we clean</span></span><span class="line"><span>up the mess</span></span></h1>
@@ -248,7 +252,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     </div>
     <figure class="rv">
       <div class="photo ">
-  <div class="ph"><span>Photo: owner with the truck</span></div>
+  <div class="ph"></div>
 </div>
       <figcaption>Mariah and Tanna, on the job</figcaption>
     </figure>
@@ -275,28 +279,28 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Basic clean job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Basic clean</h3><p>Kitchen, baths, floors, surfaces. The weekly reset.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Deep clean job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Deep clean</h3><p>Baseboards, inside appliances, the corners. The one you book before guests.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Move-out clean job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Move-out clean</h3><p>Get the deposit back.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Specials job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Specials</h3><p>Holiday deals and limited spots, posted here and on Facebook.</p></div>
       </article>

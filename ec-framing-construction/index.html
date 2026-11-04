@@ -58,7 +58,11 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     repeating-linear-gradient(135deg, rgba(255,255,255,.07) 0 14px, transparent 14px 28px),
     linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 35%, #000));
 }
-.ph span{border:1px dashed rgba(255,255,255,.5);padding:.4em .9em;border-radius:3px}
+.ph span{display:none}
+/* a photo that failed to load becomes a quiet brand panel instead of a broken icon */
+.photo.noimg{background:
+    radial-gradient(120% 90% at 20% 10%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 60%),
+    linear-gradient(160deg, color-mix(in srgb, var(--primary) 70%, #000), color-mix(in srgb, var(--primary) 30%, #000))}
 
 /* ---------- header ---------- */
 .site-head{
@@ -222,8 +226,8 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
 </header>
 
 <section class="hero">
-  <div class="photo ">
-  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/863358722_122148370515042110_1501009905799294219_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1024x1536&amp;ctp=p960x960&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=nEFpZH0-D1UQ7kNvwE2vLQZ&amp;_nc_oc=AdoWXsvEFUfHzyPSwPTN-8eEv9WmZ5ygZ2aRTAvTBqvwvvxeat1Fwrw2kzQ-CMzFjLU&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=FG9C9fpVUzCyZsYKnhsTZA&amp;_nc_ss=792a8&amp;oh=00_AQNcZpzldK6u9K8EFKX3lpWLnslnxY8ZFisP1M_37mdKbw&amp;oe=6AE580E9" alt="hero, their best job or their truck" loading="lazy">
+  <div class="photo hero-photo">
+  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/863358722_122148370515042110_1501009905799294219_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1024x1536&amp;ctp=p960x960&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=nEFpZH0-D1UQ7kNvwE2vLQZ&amp;_nc_oc=AdoWXsvEFUfHzyPSwPTN-8eEv9WmZ5ygZ2aRTAvTBqvwvvxeat1Fwrw2kzQ-CMzFjLU&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=FG9C9fpVUzCyZsYKnhsTZA&amp;_nc_ss=792a8&amp;oh=00_AQNcZpzldK6u9K8EFKX3lpWLnslnxY8ZFisP1M_37mdKbw&amp;oe=6AE580E9" alt=""  onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
   <div class="wrap">
     <h1><span class="line"><span>Strong framing makes</span></span><span class="line"><span>a strong home</span></span></h1>
@@ -248,7 +252,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     </div>
     <figure class="rv">
       <div class="photo ">
-  <div class="ph"><span>Photo: owner with the truck</span></div>
+  <div class="ph"></div>
 </div>
       <figcaption>EC Framing, on the job</figcaption>
     </figure>
@@ -275,28 +279,28 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Framing job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Framing</h3><p>New builds and additions, square and plumb.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Remodeling job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Remodeling</h3><p>Open it up, move a wall, make it work.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Porches and decks job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Porches and decks</h3><p>Built to sit on for years.</p></div>
       </article>
       
       <article class="svc">
         <div class="photo ">
-  <div class="ph"><span>Photo: Doors, windows, siding job photo</span></div>
+  <div class="ph"></div>
 </div>
         <div class="body"><h3>Doors, windows, siding</h3><p>Replacement and new install.</p></div>
       </article>
@@ -314,7 +318,7 @@ h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);line-height:.95;
     </div>
     
     <div class="photo single rv">
-  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/863358722_122148370515042110_1501009905799294219_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1024x1536&amp;ctp=p960x960&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=nEFpZH0-D1UQ7kNvwE2vLQZ&amp;_nc_oc=AdoWXsvEFUfHzyPSwPTN-8eEv9WmZ5ygZ2aRTAvTBqvwvvxeat1Fwrw2kzQ-CMzFjLU&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=FG9C9fpVUzCyZsYKnhsTZA&amp;_nc_ss=792a8&amp;oh=00_AQNcZpzldK6u9K8EFKX3lpWLnslnxY8ZFisP1M_37mdKbw&amp;oe=6AE580E9" alt="feature" loading="lazy">
+  <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/863358722_122148370515042110_1501009905799294219_n.jpg?stp=dst-jpg_tt6&amp;cstp=mx1024x1536&amp;ctp=p960x960&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=833d8c&amp;_nc_ohc=nEFpZH0-D1UQ7kNvwE2vLQZ&amp;_nc_oc=AdoWXsvEFUfHzyPSwPTN-8eEv9WmZ5ygZ2aRTAvTBqvwvvxeat1Fwrw2kzQ-CMzFjLU&amp;_nc_zt=23&amp;_nc_ht=scontent-dfw5-1.xx&amp;_nc_gid=FG9C9fpVUzCyZsYKnhsTZA&amp;_nc_ss=792a8&amp;oh=00_AQNcZpzldK6u9K8EFKX3lpWLnslnxY8ZFisP1M_37mdKbw&amp;oe=6AE580E9" alt="" loading="lazy" onerror="this.parentElement.classList.add('noimg');this.remove()">
 </div>
     
   </div>
