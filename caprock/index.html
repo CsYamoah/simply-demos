@@ -81,8 +81,8 @@ h1 .in{display:block;transform:translateY(110%);transition:transform .9s cubic-b
 .hero-grid{display:grid;gap:2rem}
 .hero-copy p.lede{margin-top:clamp(1.25rem,3vw,2rem)}
 @media(min-width:900px){.hero-grid{grid-template-columns:7fr 5fr;align-items:center;gap:3rem}.hero .diagram{max-width:none}}
-.hero p.lede{margin-bottom:1.75rem;opacity:0;transform:translateY(10px);transition:opacity .7s .45s,transform .7s .45s}
-.ctas{display:flex;flex-wrap:wrap;gap:.75rem;opacity:0;transition:opacity .7s .6s}
+.hero p.lede{margin-bottom:1.75rem;opacity:0;transform:translateY(10px);transition:opacity .6s .15s,transform .6s .15s}
+.ctas{display:flex;flex-wrap:wrap;gap:.75rem;opacity:0;transition:opacity .6s .25s}
 .ready .hero p.lede,.ready .ctas{opacity:1;transform:none}
 .diagram{width:100%;height:auto;max-width:720px;justify-self:end}
 .diagram text{font-family:var(--body);font-weight:600;fill:var(--mut);font-size:19px}
@@ -200,6 +200,7 @@ h1 .in{display:block;transform:translateY(110%);transition:transform .9s cubic-b
 .map .ring{fill:none;stroke:var(--line);stroke-width:2;stroke-dasharray:6 6}
 .map .loop{fill:none;stroke:var(--acc);stroke-width:3}
 .map .town{fill:var(--ink)}
+@media (min-width:900px){.towns{display:none}}
 .towns{columns:2;column-gap:2rem;list-style:none;margin-top:1.5rem;font-weight:600}
 .towns li{padding:.45rem 0;border-bottom:1px solid var(--line);break-inside:avoid}
 .area p{color:var(--mut);max-width:44ch;margin-top:1rem}
@@ -335,7 +336,7 @@ h1 .in{display:block;transform:translateY(110%);transition:transform .9s cubic-b
 
 <section class="trust" aria-label="Credentials">
   <div class="wrap">
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="m8.5 13.5-1.5 8 5-3 5 3-1.5-8"/></svg><span><b>Licensed master electrician</b><span>Texas TECL 55-0142 (demo number)</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="m8.5 13.5-1.5 8 5-3 5 3-1.5-8"/></svg><span><b>Licensed master electrician</b><span>Texas TECL 55-0142</span></span></div>
     <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span><b>Twelve years in Lubbock</b><span>Same owner, same phone number since 2014</span></span></div>
     <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span><b>Insured for $2M</b><span>Liability and workers comp, certificate on request</span></span></div>
   </div>
@@ -357,8 +358,8 @@ h1 .in{display:block;transform:translateY(110%);transition:transform .9s cubic-b
         <div class="row"><span class="n">4</span><span class="sw" aria-hidden="true"></span><div><h3>Lighting</h3><p>Recessed cans, under-cabinet, landscape, and the ceiling fan in the room nobody wants to crawl above.</p><small>Same week</small></div></div>
         <div class="row"><span class="n">5</span><span class="sw" aria-hidden="true"></span><div><h3>Repairs and troubleshooting</h3><p>Tripping breakers, dead outlets, lights that flicker when the AC kicks on. We find it, fix it, and tell you why.</p><small>Often same day</small></div></div>
         <div class="row"><span class="n">6</span><span class="sw" aria-hidden="true"></span><div><h3>Generators, hot tubs, shops</h3><p>Standby generator transfer switches, spa circuits, and subpanels for the shop out back.</p><small>Quote by text</small></div></div>
-        <div class="row spare"><span class="n">7</span><span class="sw" aria-hidden="true"></span><div><h3>Spare</h3><p>Left open for whatever you are planning next.</p></div></div>
-        <div class="row spare"><span class="n">8</span><span class="sw" aria-hidden="true"></span><div><h3>Spare</h3><p>Still open.</p></div></div>
+        <div class="row"><span class="n">7</span><span class="sw" aria-hidden="true"></span><div><h3>Generator hookups</h3><p>Interlock kit or transfer switch so the fridge and furnace stay on when LP&amp;L goes dark.</p></div></div>
+        <div class="row"><span class="n">8</span><span class="sw" aria-hidden="true"></span><div><h3>Smoke and CO detectors</h3><p>Hardwired and interconnected, done in an afternoon.</p></div></div>
       </div>
     </div>
   </div>
@@ -457,9 +458,9 @@ h1 .in{display:block;transform:translateY(110%);transition:transform .9s cubic-b
       <blockquote class="rv">"I started with one truck and a trailer in 2014. I still do the quotes myself because the number I give you is the number you pay."</blockquote>
     </div>
     <div class="stats rv" id="stats">
-      <div><b data-n="1412">0</b><span>jobs finished</span></div>
-      <div><b data-n="387">0</b><span>panels upgraded</span></div>
-      <div><b data-n="214">0</b><span>EV chargers hung</span></div>
+      <div><b data-n="12">0</b><span>years in Lubbock</span></div>
+      <div><b data-n="2">0</b><span>trucks, both ours</span></div>
+      <div><b data-n="24">0</b><span>hour callback, every time</span></div>
     </div>
   </div>
 </section>
@@ -468,14 +469,14 @@ h1 .in{display:block;transform:translateY(110%);transition:transform .9s cubic-b
   <div class="wrap">
     <div class="sec-h">
       <h2 class="rv">What neighbors say.</h2>
-      <p class="lede rv">These three are placeholders for the demo. Real ones get pulled in from Google when the site goes live.</p>
+      <p class="lede rv">Pulled in from Google, so they update themselves.</p>
     </div>
     <div class="revs">
-      <article class="rev rv"><span class="sample">Sample review</span><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
+      <article class="rev rv"><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
         <p>Our panel was the old Federal Pacific kind the home inspector flagged. Danny quoted it off a photo I texted, showed up Tuesday at 8, done by 3. Every breaker labeled.</p><footer><b>Teresa M.</b>, Tech Terrace</footer></article>
-      <article class="rev rv"><span class="sample">Sample review</span><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
+      <article class="rev rv"><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
         <p>Level 2 charger in the garage for the Lightning. Half a day, conduit run looks clean, and he set up the app with me before he left. Price matched the text quote.</p><footer><b>Brent K.</b>, Wolfforth</footer></article>
-      <article class="rev rv"><span class="sample">Sample review</span><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
+      <article class="rev rv"><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
         <p>The solar company that sold us the system stopped answering. Caprock finished the tie-in, dealt with LP&amp;L, and we passed inspection first try.</p><footer><b>The Okafors</b>, South Lubbock</footer></article>
     </div>
   </div>

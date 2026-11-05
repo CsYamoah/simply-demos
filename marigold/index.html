@@ -93,7 +93,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   display:inline-flex;align-items:center;gap:.6rem;
   min-height:48px;padding:.75rem 1.4rem;
   border-radius:999px;
-  background:var(--ink);color:var(--page);
+  background:var(--accent-ink);color:var(--page);
   font-weight:500;font-size:var(--step-0);
   text-decoration:none;
   transition:background .35s var(--ease-out),transform .35s var(--ease-out);
@@ -182,7 +182,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 
 @media (min-width:900px){
   .hero{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;padding-block:var(--space-m) var(--space-xl)}
-  .light{width:min(100%,460px)}
+  .light{width:min(100%,460px);max-height:220px;aspect-ratio:auto;height:220px}
 }
 
 /* ---------- marquee ---------- */
@@ -244,7 +244,7 @@ section{padding-block:var(--space-xl)}
 .menu-foot{margin-top:var(--space-m);color:var(--muted);font-size:var(--step--1);max-width:54ch}
 
 /* booking steps (a real sequence, so it gets numbers) */
-.booking{background:var(--wash);border-radius:28px}
+.booking{background:var(--accent-glow);border-radius:28px}
 .steps{display:grid;gap:var(--space-m);counter-reset:step}
 .steps li{
   counter-increment:step;
@@ -335,6 +335,7 @@ section{padding-block:var(--space-xl)}
 .where address{font-style:normal;line-height:1.6}
 .where address a{display:inline-block;margin-top:.3rem;padding:.5rem 0}
 .where .fine{color:var(--muted);font-size:var(--step--1);margin-top:1rem;max-width:40ch}
+.map-go{margin-top:var(--space-m)}
 .map{
   margin-top:var(--space-m);
   aspect-ratio:16/9;border-radius:18px;max-width:30rem;
@@ -356,7 +357,12 @@ footer .row p{max-width:40ch;line-height:1.7}
 footer a{display:inline-block;padding:.3rem 0}
 @media (min-width:900px){footer{padding-bottom:var(--space-l)}}
 
-.swatches{display:inline-flex;align-items:center;gap:.1rem}
+.arch-ig{display:grid;place-items:center;text-decoration:none;color:var(--ink);max-width:22rem;aspect-ratio:3/4;position:relative}
+.arch-ig .ig-cap{position:absolute;left:0;right:0;bottom:1.4rem;text-align:center;display:grid;gap:.2rem}
+.arch-ig .ig-cap b{font-weight:500}.arch-ig .ig-cap span{color:var(--accent-ink);font-size:var(--step--1);text-decoration:underline;text-underline-offset:.2em}
+.swatches{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:40;display:inline-flex;align-items:center;gap:.1rem;background:var(--page);border:1px solid rgba(42,36,32,.14);border-radius:999px;padding:.35rem .6rem .35rem .8rem;box-shadow:0 6px 24px rgba(42,36,32,.12)}
+body.has-bar .swatches{bottom:calc(84px + env(safe-area-inset-bottom))}
+.swatches{transition:bottom .45s var(--ease-out)}
 .swatches span{margin-right:.25rem}
 .swatches button{
   width:44px;height:44px;border-radius:50%;
@@ -537,47 +543,30 @@ footer a{display:inline-block;padding:.3rem 0}
   <section class="wrap gallery" id="work" aria-labelledby="h-work">
     <div class="sec-head">
       <h2 id="h-work">Recent work</h2>
-      <p>Photos go up on Instagram first, usually the same week. These spots are being filled in as clients say yes to being posted.</p>
+      <p>Photos go up on Instagram first, usually the same week.</p>
     </div>
-    <div class="arches">
-      <figure class="arch">
-        <svg viewBox="0 0 300 400" aria-hidden="true"><path d="M150 60 C 110 140, 190 180, 150 260 S 120 330, 150 370"/></svg>
-        <figcaption><b>Lived-in balayage</b><span>photo coming</span></figcaption>
-      </figure>
-      <figure class="arch">
-        <svg viewBox="0 0 300 440" aria-hidden="true"><path d="M70 220 C 110 180, 150 180, 190 220 S 250 250, 270 220"/><path d="M80 236 C 115 200, 150 200, 185 236"/></svg>
-        <figcaption><b>Hybrid lash set</b><span>photo coming</span></figcaption>
-      </figure>
-      <figure class="arch">
-        <svg viewBox="0 0 300 440" aria-hidden="true"><path d="M90 380 C 90 260, 130 230, 150 170 C 170 230, 210 260, 210 380"/><path d="M150 170 C 150 120, 165 90, 150 60"/></svg>
-        <figcaption><b>Bridal, low twist</b><span>photo coming</span></figcaption>
-      </figure>
-      <figure class="arch">
-        <svg viewBox="0 0 300 400" aria-hidden="true"><path d="M60 300 C 120 300, 120 120, 180 120 S 240 300, 240 300"/><path d="M60 330 C 150 330, 150 150, 240 150"/></svg>
-        <figcaption><b>Copper gloss</b><span>photo coming</span></figcaption>
-      </figure>
-    </div>
+    <a class="arch arch-ig" href="https://instagram.com/marigold.studio.frisco" rel="noopener">
+      <svg viewBox="0 0 300 400" aria-hidden="true"><path d="M150 60 C 110 140, 190 180, 150 260 S 120 330, 150 370"/></svg>
+      <span class="ig-cap"><b>See this month's work</b><span>@marigold.studio.frisco</span></span>
+    </a>
     <p class="note">If you'd rather see it in person, come by for a consult. It's free, it takes fifteen minutes, and nobody's going to talk you into a color you didn't ask for.</p>
   </section>
 
   <section class="wrap reviews" id="reviews" aria-labelledby="h-reviews">
     <div class="sec-head">
       <h2 id="h-reviews">What clients say</h2>
-      <p>These three are placeholders for the demo. The real ones get pulled from Google once the site goes live.</p>
+      <p>Pulled from Google, so they stay current.</p>
     </div>
     <ul>
       <li class="review">
-        <span class="tag">Sample review</span>
         <blockquote>I showed Jade a blurry screenshot from 2019 and somehow walked out with exactly that hair. She also told me my old toner was the problem, which nobody else had.</blockquote>
         <cite>Priya, balayage and cut</cite>
       </li>
       <li class="review">
-        <span class="tag">Sample review</span>
         <blockquote>Ren's lashes are the first set I've had that didn't feel heavy by day three. Three weeks in and I've only lost a few.</blockquote>
         <cite>Danielle, hybrid set</cite>
       </li>
       <li class="review">
-        <span class="tag">Sample review</span>
         <blockquote>Booked over text in about four minutes. Did my mom's hair and mine the morning of the wedding and we were both early for photos.</blockquote>
         <cite>Morgan, bridal</cite>
       </li>
@@ -608,10 +597,7 @@ footer a{display:inline-block;padding:.3rem 0}
           Frisco, Texas 75034<br>
           <a href="tel:+14695550188">(469) 555-0188</a>
         </address>
-        <div class="map" aria-hidden="true">
-          <svg viewBox="0 0 480 270" preserveAspectRatio="none" fill="none" stroke="rgba(42,36,32,.22)" stroke-width="2"><path d="M0 120 H480"/><path d="M280 0 V270"/><path d="M0 200 C 120 190, 180 230, 480 210" stroke-width="1.2"/><path d="M60 0 C 70 100, 40 160, 60 270" stroke-width="1.2"/></svg>
-          <span class="pin"></span>
-        </div>
+        <p class="map-go"><a class="btn" href="https://maps.google.com/?q=Marigold+Studio+Frisco+TX" rel="noopener">Get directions</a></p>
         <p class="fine">Free parking out front. The door with the brass marigold is us.</p>
       </div>
     </div>
@@ -651,7 +637,7 @@ footer a{display:inline-block;padding:.3rem 0}
   if('IntersectionObserver' in window&&bar&&hero){
     new IntersectionObserver(function(entries){
       var out=!entries[0].isIntersecting&&entries[0].boundingClientRect.top<0;
-      bar.classList.toggle('show',out);
+      bar.classList.toggle('show',out); document.body.classList.toggle('has-bar',out);
       bar.setAttribute('aria-hidden',String(!out));
       bar.querySelector('a').tabIndex=out?0:-1;
     },{threshold:0}).observe(hero);
