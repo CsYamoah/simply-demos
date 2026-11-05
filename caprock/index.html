@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caprock Electric &amp; Solar | Lubbock electrician for panels, EV chargers, and solar</title>
+<meta name="description" content="Caprock Electric & Solar. Panel upgrades, EV chargers, solar, lighting, and repairs in Lubbock, TX. Licensed, insured, two trucks, twelve years. Call or text (806) 555-0142.">
+<meta name="theme-color" content="#17191C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FFB224'/%3E%3Cpath d='M18 4 8 18h7l-1 10 10-14h-7z' fill='%2317191C'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#17191C;--sur:#202329;--sur2:#262A31;--line:#2F343C;--ink:#F2EDE3;--mut:#A9A499;--dim:#6E6A62;
+  --acc:#FFB224;--acc-ink:#1A1200;--acc-soft:rgba(255,178,36,.14);
+  --disp:"Big Shoulders Display","TeX Gyre Heros Cn","Arial Narrow",Impact,"Helvetica Neue",sans-serif;
+  --body:Barlow,Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gut:clamp(16px,4vw,48px);--max:1200px;--r:6px;
+}
+:root[data-pal="copper"]{--acc:#E8743F;--acc-ink:#1C0B04;--acc-soft:rgba(232,116,63,.16)}
+:root[data-pal="sky"]{--acc:#5FC8FF;--acc-ink:#03141E;--acc-soft:rgba(95,200,255,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.5;
+  background-image:
+    radial-gradient(1200px 600px at 85% -10%,var(--acc-soft),transparent 60%),
+    repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.012) 3px 4px);}
+a{color:inherit}
+::selection{background:var(--acc);color:var(--acc-ink)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:2px}
+svg{display:block}
+.wrap{width:min(var(--max),100% - 2*var(--gut));margin-inline:auto}
+h1,h2,h3,.disp{font-family:var(--disp);font-weight:900;line-height:.92;letter-spacing:.005em;text-transform:none}
+h2{font-size:clamp(2.6rem,7.5vw,5.5rem);max-width:17ch}
+h3{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;line-height:1}
+p.lede{font-size:clamp(1.1rem,1.4vw,1.3rem);color:var(--mut);max-width:56ch}
+.sec{padding:clamp(4rem,9vw,7rem) 0;border-top:1px solid var(--line)}
+.sec-h{display:grid;gap:1.25rem;margin-bottom:clamp(2rem,5vw,3.5rem)}
+@media(min-width:900px){.sec-h{grid-template-columns:1.2fr 1fr;align-items:end}.sec-h p{justify-self:end;max-width:44ch}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:52px;padding:.85rem 1.35rem;border-radius:var(--r);
+  font-weight:600;font-size:1.05rem;text-decoration:none;border:1.5px solid transparent;white-space:nowrap;
+  transition:transform .15s ease,background .2s,border-color .2s}
+.btn:active{transform:translateY(1px)}
+.btn-acc{background:var(--acc);color:var(--acc-ink)}
+.btn-acc:hover{filter:brightness(1.06)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--mut)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(23,25,28,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s}
+.hdr.on{border-bottom-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.65rem;text-decoration:none}
+.logo .mark{width:36px;height:36px;border-radius:7px;background:var(--acc);display:grid;place-items:center}
+.logo .mark svg{width:22px;height:22px}
+.logo b{font-family:var(--disp);font-weight:900;font-size:1.65rem;letter-spacing:.01em;line-height:1}
+.logo small{display:block;font-family:var(--body);font-weight:600;font-size:.72rem;color:var(--mut);letter-spacing:.02em;margin-top:2px;white-space:nowrap}
+.nav{display:none;gap:2rem}
+.nav a{text-decoration:none;color:var(--mut);font-weight:600;font-size:.95rem;padding:.75rem 0;display:inline-block}
+.nav a:hover{color:var(--ink)}
+.hdr .btn{min-height:44px;padding:.6rem 1rem}
+.hdr .btn span{display:none}
+@media(min-width:900px){.nav{display:flex}.hdr .btn span{display:inline}}
+
+/* hero */
+.hero{padding:clamp(2rem,4vw,2.75rem) 0 clamp(3rem,7vw,6rem);position:relative}
+.status{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:.88rem;color:var(--mut);margin-bottom:1.25rem}
+.status i{width:14px;height:4px;background:var(--acc);border-radius:2px}
+h1{font-size:clamp(3.2rem,13.2vw,6.1rem)}
+h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em;white-space:nowrap}
+h1 .in{display:block;transform:translateY(110%);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.ready h1 .ln:nth-child(2) .in{transition-delay:.09s}
+.ready h1 .ln:nth-child(3) .in{transition-delay:.18s}
+.ready h1 .in{transform:none}
+.hero-grid{display:grid;gap:2rem}
+.hero-copy p.lede{margin-top:clamp(1.25rem,3vw,2rem)}
+@media(min-width:900px){.hero-grid{grid-template-columns:7fr 5fr;align-items:center;gap:3rem}.hero .diagram{max-width:none}}
+.hero p.lede{margin-bottom:1.75rem;opacity:0;transform:translateY(10px);transition:opacity .7s .45s,transform .7s .45s}
+.ctas{display:flex;flex-wrap:wrap;gap:.75rem;opacity:0;transition:opacity .7s .6s}
+.ready .hero p.lede,.ready .ctas{opacity:1;transform:none}
+.diagram{width:100%;height:auto;max-width:720px;justify-self:end}
+.diagram text{font-family:var(--body);font-weight:600;fill:var(--mut);font-size:19px}
+@media(max-width:899px){.diagram text{font-size:23px}.diagram .w,.diagram .t{stroke-width:3.5}.diagram .p{stroke-width:4}}
+.diagram .w{fill:none;stroke:var(--line);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.diagram .t{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)}
+.ready .diagram .t{stroke-dashoffset:0}
+.diagram .p{fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;stroke-dasharray:.07 .93;stroke-dashoffset:1;opacity:0;animation:flow 3.2s linear 1.5s infinite}
+.diagram .p.d2{animation-delay:2.1s}.diagram .p.d3{animation-delay:2.7s}.diagram .p.d4{animation-delay:3.3s}
+@keyframes flow{0%{stroke-dashoffset:1;opacity:0}6%{opacity:1}94%{opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+.diagram .box{fill:var(--sur);stroke:var(--line);stroke-width:2}
+.diagram .brk{fill:var(--line)}
+.diagram .brk.on{fill:var(--acc)}
+.diagram .glow{fill:var(--acc);opacity:0;animation:glow 3.2s ease-in-out 2.2s infinite}
+@keyframes glow{0%,100%{opacity:0}50%{opacity:.9}}
+
+/* trust */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--sur)}
+.trust .wrap{display:grid;grid-template-columns:1fr;gap:0}
+.trust div{display:flex;gap:.9rem;align-items:center;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.trust div:last-child{border-bottom:0}
+.trust svg{width:30px;height:30px;flex:none;color:var(--acc)}
+.trust b{display:block;font-weight:600;font-size:1.05rem;line-height:1.2}
+.trust span{color:var(--mut);font-size:.92rem}
+@media(min-width:900px){.trust .wrap{grid-template-columns:repeat(3,1fr)}.trust div{padding:1.5rem 2rem 1.5rem 0;border-bottom:0;border-right:1px solid var(--line)}.trust div+div{padding-left:2rem}.trust div:last-child{border-right:0}}
+
+/* panel schedule */
+.panel{border:2px solid var(--line);border-radius:10px;background:linear-gradient(180deg,var(--sur2),var(--sur));box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 30px 60px -40px rgba(0,0,0,.8);overflow:hidden}
+.panel-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 1.1rem;border-bottom:2px solid var(--line);background:rgba(0,0,0,.18)}
+.panel-top b{font-family:var(--disp);font-weight:800;font-size:1.25rem;letter-spacing:.06em}
+.panel-top span{font-size:.82rem;color:var(--mut);font-weight:600}
+.main-brk{display:flex;align-items:center;gap:.75rem;padding:1rem 1.1rem;border-bottom:2px solid var(--line)}
+.main-brk .sw{width:52px;height:26px;border-radius:5px;background:var(--acc);position:relative;flex:none;box-shadow:inset 0 -3px 0 rgba(0,0,0,.25)}
+.main-brk .sw::after{content:"";position:absolute;right:5px;top:5px;width:18px;height:16px;border-radius:3px;background:var(--acc-ink);opacity:.55}
+.main-brk b{font-family:var(--disp);font-size:1.6rem;font-weight:900}
+.main-brk span{color:var(--mut);font-size:.9rem}
+.rows{display:grid;grid-template-columns:1fr}
+.row{display:grid;grid-template-columns:auto auto 1fr;gap:.9rem 1rem;align-items:start;padding:1.15rem 1.1rem;border-bottom:1px solid var(--line);opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}
+.row:nth-child(2){transition-delay:.06s}.row:nth-child(3){transition-delay:.12s}.row:nth-child(4){transition-delay:.18s}.row:nth-child(5){transition-delay:.24s}.row:nth-child(6){transition-delay:.3s}.row:nth-child(7){transition-delay:.36s}.row:nth-child(8){transition-delay:.42s}
+.panel.vis .row{opacity:1;transform:none}
+.row .n{font-family:var(--disp);font-weight:800;font-size:1.3rem;color:var(--dim);width:1.6rem;line-height:1;padding-top:.15rem}
+.row .sw{width:22px;height:40px;border-radius:4px;background:#0f1113;border:1.5px solid var(--line);position:relative;margin-top:.1rem}
+.row .sw::after{content:"";position:absolute;left:4px;right:4px;top:4px;height:14px;border-radius:2px;background:var(--acc);box-shadow:0 0 10px var(--acc-soft)}
+.row.spare .sw::after{top:auto;bottom:4px;background:var(--line);box-shadow:none}
+.row h3{margin-bottom:.35rem}
+.row p{color:var(--mut);font-size:1rem;line-height:1.45;max-width:46ch}
+.row small{display:inline-block;margin-top:.55rem;font-weight:600;font-size:.82rem;color:var(--ink);background:rgba(255,255,255,.06);padding:.25rem .55rem;border-radius:4px}
+.row.spare h3{color:var(--dim)}
+@media(min-width:900px){.rows{grid-template-columns:1fr 1fr}.row:nth-child(odd){border-right:1px solid var(--line)}.row{padding:1.5rem 1.4rem}}
+
+/* process */
+.steps{position:relative;display:grid;gap:2.25rem;padding-left:2.1rem}
+.wire{position:absolute;left:9px;top:12px;bottom:12px;width:4px;background:var(--line);border-radius:2px;overflow:hidden}
+.wire i{position:absolute;left:0;top:0;width:100%;height:0%;background:var(--acc);border-radius:2px}
+.step{position:relative}
+.step::before{content:"";position:absolute;left:-2.1rem;top:.25rem;width:22px;height:22px;border-radius:50%;background:var(--bg);border:4px solid var(--line);transition:border-color .3s,background .3s}
+.step.lit::before{border-color:var(--acc);background:var(--acc)}
+.step b{display:block;font-family:var(--disp);font-weight:900;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1;margin-bottom:.4rem}
+.step b small{font-size:.5em;color:var(--dim);margin-right:.5rem;font-weight:800}
+.step p{color:var(--mut);max-width:40ch}
+@media(min-width:900px){
+  .steps{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding-left:0;padding-top:2.4rem}
+  .wire{left:11px;right:11px;top:9px;bottom:auto;width:auto;height:4px}
+  .wire i{height:100%;width:0%}
+  .step::before{left:0;top:-2.4rem}
+}
+
+/* before after */
+.ba{display:grid;gap:1.25rem}
+@media(min-width:900px){.ba{grid-template-columns:1fr 1fr;align-items:center;column-gap:4rem;row-gap:1rem}.ba .cmp{grid-row:1}.ba .cap{grid-row:2}.ba-copy{grid-row:1/3;grid-column:2}}
+.cmp{position:relative;border-radius:10px;overflow:hidden;border:2px solid var(--line);aspect-ratio:4/3;background:#0f1113;user-select:none;-webkit-user-select:none}
+.cmp svg{position:absolute;inset:0;width:100%;height:100%}
+.cmp .after{clip-path:inset(0 0 0 var(--x,50%))}
+.cmp .bar{position:absolute;top:0;bottom:0;left:var(--x,50%);width:3px;background:var(--acc);transform:translateX(-50%);pointer-events:none}
+.cmp .bar::after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;background:var(--acc);transform:translate(-50%,-50%);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2317191C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6 3 12l6 6M15 6l6 6-6 6'/%3E%3C/svg%3E");background-size:22px;background-position:center;background-repeat:no-repeat}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0;touch-action:pan-y}
+.cmp .tag{position:absolute;top:12px;padding:.3rem .6rem;border-radius:4px;background:rgba(0,0,0,.6);font-weight:600;font-size:.82rem;pointer-events:none}
+.cmp .tag.l{left:12px}.cmp .tag.r{right:12px}
+.cap{font-size:.9rem;color:var(--mut);margin-top:-.5rem}
+.ba-copy p{color:var(--mut);margin-top:1rem;max-width:44ch}
+.ba-copy ul{list-style:none;margin-top:1.5rem;display:grid;gap:.6rem}
+.ba-copy li{display:flex;gap:.7rem;align-items:flex-start}
+.ba-copy li svg{width:20px;height:20px;flex:none;color:var(--acc);margin-top:3px}
+
+/* owner */
+.owner{display:grid;gap:2rem}
+@media(min-width:900px){.owner{grid-template-columns:1fr 1fr;gap:4rem;align-items:center}}
+.owner-card{border:2px solid var(--line);border-radius:10px;padding:1.5rem;background:var(--sur);display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center}
+.owner-card .av{width:84px;height:84px;border-radius:10px;background:var(--bg);border:2px solid var(--acc);display:grid;place-items:center;font-family:var(--disp);font-weight:900;font-size:2.4rem;color:var(--acc)}
+.owner-card b{display:block;font-size:1.25rem;font-weight:600}
+.owner-card span{color:var(--mut);font-size:.95rem}
+.owner blockquote{font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.35;margin-top:1.5rem;max-width:40ch}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;border-top:1px solid var(--line);padding-top:1.5rem}
+@media(min-width:900px){.stats{grid-template-columns:1fr;gap:0;margin-top:0;border-top:0;padding-top:0;align-self:stretch}.stats div{display:flex;align-items:baseline;gap:1.25rem;padding:1.1rem 0;border-bottom:1px solid var(--line)}.stats div:first-child{border-top:1px solid var(--line)}.stats b{min-width:4.5ch}}
+.stats b{display:block;font-family:var(--disp);font-weight:900;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1;font-variant-numeric:tabular-nums}
+.stats span{color:var(--mut);font-size:.9rem;font-weight:600}
+
+/* reviews */
+.revs{display:grid;gap:2rem}
+@media(min-width:900px){.revs{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.rev{border-top:3px solid var(--acc);padding:1.25rem 0 0;display:flex;flex-direction:column;gap:1rem;position:relative}
+.rev .sample{align-self:flex-start;font-size:.75rem;font-weight:600;color:var(--mut);border:1px dashed var(--dim);padding:.2rem .5rem;border-radius:4px}
+.rev .stars{display:flex;gap:2px;color:var(--acc)}
+.rev .stars svg{width:18px;height:18px}
+.rev p{font-size:1.15rem;line-height:1.45;flex:1}
+.rev footer{font-size:.92rem;color:var(--mut)}
+.rev footer b{color:var(--ink);font-weight:600}
+
+/* area */
+.area{display:grid;gap:2rem}
+@media(min-width:900px){.area{grid-template-columns:1fr 1fr;gap:4rem;align-items:center}}
+.map{width:100%;height:auto;max-width:520px}
+.map text{font-family:var(--body);font-weight:600;font-size:18px;fill:var(--mut)}
+.map .ring{fill:none;stroke:var(--line);stroke-width:2;stroke-dasharray:6 6}
+.map .loop{fill:none;stroke:var(--acc);stroke-width:3}
+.map .town{fill:var(--ink)}
+.towns{columns:2;column-gap:2rem;list-style:none;margin-top:1.5rem;font-weight:600}
+.towns li{padding:.45rem 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.area p{color:var(--mut);max-width:44ch;margin-top:1rem}
+
+/* contact */
+.contact{background:var(--acc);color:var(--acc-ink);border-top:0}
+.contact h2{max-width:none}
+.contact .phone{font-family:var(--disp);font-weight:900;font-size:clamp(3rem,12vw,8rem);line-height:.95;text-decoration:none;display:inline-block;letter-spacing:.01em;margin:.5rem 0 1rem}
+.contact .phone:hover{text-decoration:underline;text-decoration-thickness:.06em;text-underline-offset:.08em}
+.contact p{max-width:52ch;font-size:1.1rem}
+.contact .btn-dark{background:var(--acc-ink);color:var(--acc);border-color:transparent}
+.contact .btn-line{border-color:rgba(0,0,0,.35);color:var(--acc-ink)}
+.contact .ctas{opacity:1;margin-top:1.5rem}
+.hours{display:grid;gap:.4rem;margin-top:2rem;font-weight:600;max-width:52ch;border-top:2px solid rgba(0,0,0,.25);padding-top:1.25rem}
+.hours div{display:flex;justify-content:space-between;gap:1rem}
+.hours div span:last-child{font-weight:400}
+.contact .after{margin-top:1rem;font-weight:600;font-size:1rem}
+
+/* footer */
+.ftr{padding:2.5rem 0 7rem;font-size:.92rem;color:var(--mut)}
+.ftr .wrap{display:grid;gap:1rem}
+.ftr a{color:var(--ink);display:inline-block;padding:.6rem 0;margin:-.6rem 0}
+@media(min-width:900px){.ftr .wrap{grid-template-columns:1fr auto;align-items:center}}
+
+/* palette switcher */
+.pal{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;align-items:center;gap:.4rem;background:var(--sur);border:1px solid var(--line);border-radius:999px;padding:5px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.pal button{height:40px;border:0;background:transparent;color:var(--ink);font:inherit;font-weight:600;font-size:.85rem;padding:0 .6rem 0 .8rem;border-radius:999px;cursor:pointer}
+.pal .sw{width:40px;height:40px;border-radius:50%;border:2px solid transparent;cursor:pointer;padding:0;display:none}
+.pal.open .sw{display:block}
+.pal .sw[aria-pressed="true"]{border-color:var(--ink)}
+.pal .sw.amber{background:#FFB224}.pal .sw.copper{background:#E8743F}.pal .sw.sky{background:#5FC8FF}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.vis{opacity:1;transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  h1 .in,.hero p.lede,.ctas,.rv,.row{opacity:1!important;transform:none!important}
+  .rv{transition:none!important}
+  .diagram .t{stroke-dashoffset:0}.diagram .p{display:none}.diagram .glow{opacity:.8}
+  .wire i{height:100%;width:100%}.step::before{border-color:var(--acc);background:var(--acc)}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Caprock Electric and Solar, home">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M13.5 2 5 13.5h6l-1 8.5 8.5-11.5h-6z" fill="#17191C"/></svg></span>
+      <span><b>Caprock</b><small>Electric &amp; Solar</small></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#services">Services</a><a href="#process">How it works</a><a href="#reviews">Reviews</a><a href="#area">Service area</a>
+    </nav>
+    <a class="btn btn-acc" href="tel:+18065550142"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>Call&nbsp;</span>(806) 555-0142</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="status"><i aria-hidden="true"></i>Taking jobs this week. On site within two days.</div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1><span class="ln"><span class="in">The electrician</span></span><span class="ln"><span class="in">Lubbock calls</span></span><span class="ln"><span class="in">for the big jobs.</span></span></h1>
+        <p class="lede">Panel upgrades, EV chargers, and solar. Two trucks, twelve years, and an owner who still answers his own phone.</p>
+        <div class="ctas">
+          <a class="btn btn-acc" href="tel:+18065550142"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call Danny</a>
+          <a class="btn btn-ghost" href="sms:+18065550142?&body=Hi%20Danny%2C%20here%27s%20a%20photo%20of%20my%20panel."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text a photo of your panel</a>
+        </div>
+      </div>
+      <!-- one-line diagram: service drop, meter, 200A panel, branches -->
+      <svg class="diagram" viewBox="0 0 640 400" role="img" aria-label="Diagram: utility service to meter to 200 amp panel, feeding an EV charger, solar, lighting, and the house">
+        <g class="base">
+          <path class="w" d="M36 40v240"/><path class="w" d="M16 56h40"/>
+          <path class="w" d="M36 70C150 70 150 150 230 150"/>
+          <path class="w" d="M262 150h48"/>
+          <path class="w" d="M400 116h130"/>
+          <path class="w" d="M355 92V32h65"/>
+          <path class="w" d="M400 172h70v30h60"/>
+          <path class="w" d="M400 214h50v92h80"/>
+        </g>
+        <g class="trace">
+          <path class="t" pathLength="1" d="M36 70C150 70 150 150 230 150"/>
+          <path class="t" pathLength="1" d="M262 150h48"/>
+          <path class="t" pathLength="1" d="M400 116h130"/>
+          <path class="t" pathLength="1" d="M355 92V32h65"/>
+          <path class="t" pathLength="1" d="M400 172h70v30h60"/>
+          <path class="t" pathLength="1" d="M400 214h50v92h80"/>
+        </g>
+        <g class="pulse">
+          <path class="p" pathLength="1" d="M36 70C150 70 150 150 230 150 M262 150h48"/>
+          <path class="p d2" pathLength="1" d="M400 116h130"/>
+          <path class="p d3" pathLength="1" d="M400 172h70v30h60"/>
+          <path class="p d4" pathLength="1" d="M400 214h50v92h80"/>
+        </g>
+        <!-- meter -->
+        <circle class="box" cx="246" cy="150" r="22"/><circle cx="246" cy="150" r="3" fill="var(--acc)"/>
+        <path d="M246 150l10-9" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+        <text x="246" y="194" text-anchor="middle">meter</text>
+        <!-- panel -->
+        <rect class="box" x="310" y="92" width="90" height="170" rx="5"/>
+        <rect x="337" y="104" width="36" height="16" rx="2" fill="var(--acc)"/>
+        <text x="355" y="142" text-anchor="middle" style="fill:var(--ink);font-size:21px;font-weight:600">200A</text>
+        <g class="brks">
+          <rect class="brk on" x="322" y="152" width="30" height="9" rx="1.5"/><rect class="brk on" x="358" y="152" width="30" height="9" rx="1.5"/>
+          <rect class="brk on" x="322" y="167" width="30" height="9" rx="1.5"/><rect class="brk" x="358" y="167" width="30" height="9" rx="1.5"/>
+          <rect class="brk on" x="322" y="182" width="30" height="9" rx="1.5"/><rect class="brk on" x="358" y="182" width="30" height="9" rx="1.5"/>
+          <rect class="brk" x="322" y="197" width="30" height="9" rx="1.5"/><rect class="brk on" x="358" y="197" width="30" height="9" rx="1.5"/>
+          <rect class="brk on" x="322" y="212" width="30" height="9" rx="1.5"/><rect class="brk" x="358" y="212" width="30" height="9" rx="1.5"/>
+          <rect class="brk" x="322" y="227" width="30" height="9" rx="1.5"/><rect class="brk" x="358" y="227" width="30" height="9" rx="1.5"/>
+        </g>
+        <text x="355" y="286" text-anchor="middle">new panel</text>
+        <!-- solar -->
+        <g transform="translate(420 10)"><rect class="box" width="72" height="44" rx="3"/><path d="M18 0v44M36 0v44M54 0v44M0 15h72M0 29h72" stroke="var(--line)" stroke-width="1.5"/></g>
+        <text x="456" y="72" text-anchor="middle">solar in</text>
+        <!-- ev -->
+        <g transform="translate(530 96)"><rect class="box" width="30" height="40" rx="4"/><circle class="glow" cx="15" cy="12" r="4"/><rect x="9" y="22" width="12" height="10" rx="2" fill="var(--line)"/></g>
+        <text x="548" y="156" text-anchor="middle">EV charger</text>
+        <!-- light -->
+        <g transform="translate(530 184)"><circle class="box" cx="18" cy="18" r="16"/><path d="M12 32h12M13 37h10" stroke="var(--line)" stroke-width="2.5" stroke-linecap="round"/><path d="M18 8v8M12 14l3 3M24 14l-3 3" stroke="var(--acc)" stroke-width="2" stroke-linecap="round"/></g>
+        <text x="548" y="248" text-anchor="middle">lighting</text>
+        <!-- house -->
+        <g transform="translate(530 270)"><path d="M0 24 24 2l24 22v38H0z" class="box" stroke-linejoin="round"/><rect x="17" y="40" width="14" height="24" rx="1" fill="var(--line)"/></g>
+        <text x="554" y="352" text-anchor="middle">the house</text>
+        <text x="36" y="300" text-anchor="middle">utility</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Credentials">
+  <div class="wrap">
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="m8.5 13.5-1.5 8 5-3 5 3-1.5-8"/></svg><span><b>Licensed master electrician</b><span>Texas TECL 55-0142 (demo number)</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span><b>Twelve years in Lubbock</b><span>Same owner, same phone number since 2014</span></span></div>
+    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span><b>Insured for $2M</b><span>Liability and workers comp, certificate on request</span></span></div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="rv">What we do, laid out like a panel.</h2>
+      <p class="lede rv">Every circuit in a house has a job. So does every truck we send. Here is the directory.</p>
+    </div>
+    <div class="panel rv">
+      <div class="panel-top"><b>CIRCUIT DIRECTORY</b><span>Caprock Electric &amp; Solar, Lubbock TX</span></div>
+      <div class="main-brk"><span class="sw" aria-hidden="true"></span><b>200A main</b><span>Residential, service upgrades included</span></div>
+      <div class="rows">
+        <div class="row"><span class="n">1</span><span class="sw" aria-hidden="true"></span><div><h3>Panel upgrades</h3><p>Old Federal Pacific or Zinsco box? We swap it for a 200 amp panel, usually in one day, and label every breaker before we leave.</p><small>1 day, permit included</small></div></div>
+        <div class="row"><span class="n">2</span><span class="sw" aria-hidden="true"></span><div><h3>EV chargers</h3><p>Level 2, 40 to 60 amp, hardwired or a NEMA 14-50 outlet. Tesla, Ford, Rivian, whatever is in the garage.</p><small>Half a day</small></div></div>
+        <div class="row"><span class="n">3</span><span class="sw" aria-hidden="true"></span><div><h3>Solar and batteries</h3><p>Systems sized to your actual LP&amp;L bill, not a sales quota. We do the electrical, the tie-in, and the inspection.</p><small>Free bill review</small></div></div>
+        <div class="row"><span class="n">4</span><span class="sw" aria-hidden="true"></span><div><h3>Lighting</h3><p>Recessed cans, under-cabinet, landscape, and the ceiling fan in the room nobody wants to crawl above.</p><small>Same week</small></div></div>
+        <div class="row"><span class="n">5</span><span class="sw" aria-hidden="true"></span><div><h3>Repairs and troubleshooting</h3><p>Tripping breakers, dead outlets, lights that flicker when the AC kicks on. We find it, fix it, and tell you why.</p><small>Often same day</small></div></div>
+        <div class="row"><span class="n">6</span><span class="sw" aria-hidden="true"></span><div><h3>Generators, hot tubs, shops</h3><p>Standby generator transfer switches, spa circuits, and subpanels for the shop out back.</p><small>Quote by text</small></div></div>
+        <div class="row spare"><span class="n">7</span><span class="sw" aria-hidden="true"></span><div><h3>Spare</h3><p>Left open for whatever you are planning next.</p></div></div>
+        <div class="row spare"><span class="n">8</span><span class="sw" aria-hidden="true"></span><div><h3>Spare</h3><p>Still open.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="rv">From your photo to a passed inspection.</h2>
+      <p class="lede rv">Four steps. You only have to do the first one.</p>
+    </div>
+    <div class="steps" id="steps">
+      <div class="wire" aria-hidden="true"><i id="wirefill"></i></div>
+      <div class="step"><b><small>1</small>Text us a photo</b><p>Open your panel door, take a picture, send it. Takes you thirty seconds and saves everyone a trip.</p></div>
+      <div class="step"><b><small>2</small>Flat quote, same day</b><p>A written number. Not "we'll see once we open it up."</p></div>
+      <div class="step"><b><small>3</small>We pull the permit</b><p>City of Lubbock permit, materials ordered, inspection scheduled. You don't call anyone.</p></div>
+      <div class="step"><b><small>4</small>Labeled and cleaned up</b><p>Every breaker labeled in print, walk-through with you, shop vac before the truck leaves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="ba">
+      <div class="cmp rv" id="cmp" style="--x:50%">
+        <!-- before: 1978 panel -->
+        <svg class="before" viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#2a2420"/>
+          <rect x="90" y="20" width="220" height="260" rx="6" fill="#8a6a4a" stroke="#5a4330" stroke-width="4"/>
+          <rect x="110" y="40" width="180" height="220" fill="#3a2e24"/>
+          <g fill="#6b5a4b">
+            <rect x="120" y="60" width="60" height="14"/><rect x="220" y="60" width="60" height="14"/>
+            <rect x="120" y="84" width="60" height="14"/><rect x="220" y="84" width="60" height="14" fill="#8a7563"/>
+            <rect x="120" y="108" width="60" height="14" fill="#4f4035"/><rect x="220" y="108" width="60" height="14"/>
+            <rect x="120" y="132" width="60" height="14"/><rect x="220" y="132" width="60" height="14"/>
+            <rect x="120" y="156" width="60" height="14" fill="#8a7563"/>
+            <rect x="120" y="180" width="60" height="14"/><rect x="220" y="180" width="60" height="14" fill="#4f4035"/>
+          </g>
+          <g fill="none" stroke-width="4" stroke-linecap="round">
+            <path d="M200 40c-10 30 20 50 0 80s20 60-10 90" stroke="#c0392b"/>
+            <path d="M190 45c-25 40 10 70-15 100s30 50 0 100" stroke="#111"/>
+            <path d="M210 42c25 40-15 70 15 100s-25 55 5 95" stroke="#ecf0f1"/>
+            <path d="M205 50c-30 20 30 40-5 70s35 35 0 70" stroke="#c0392b"/>
+            <path d="M195 55c40 15-35 45 10 65s-30 30 10 60" stroke="#111"/>
+          </g>
+          <g stroke="#2a2420" stroke-width="2" opacity=".8"><path d="M124 220c4-1 8 1 12 0s6-2 10 0"/><path d="M124 228c6 1 10-2 16 0s8 1 14 0"/><path d="M224 220c4 1 9-1 12 0s7 2 12 0"/></g>
+          <circle cx="150" cy="248" r="6" fill="#111"/><circle cx="250" cy="248" r="6" fill="#111"/>
+        </svg>
+        <!-- after: new 200A panel -->
+        <svg class="after" viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#1a1c20"/>
+          <rect x="90" y="20" width="220" height="260" rx="6" fill="#a9adb3" stroke="#6b7076" stroke-width="4"/>
+          <rect x="110" y="40" width="180" height="220" fill="#2b2f36"/>
+          <rect x="170" y="48" width="60" height="22" rx="2" fill="var(--acc)"/>
+          <text x="200" y="63" text-anchor="middle" fill="#17191C" font-size="11" font-weight="700" font-family="Barlow,Inter,sans-serif">200A</text>
+          <g fill="#3b4049" stroke="#1f2227" stroke-width="1">
+            <rect x="120" y="84" width="60" height="14" rx="2"/><rect x="220" y="84" width="60" height="14" rx="2"/>
+            <rect x="120" y="106" width="60" height="14" rx="2"/><rect x="220" y="106" width="60" height="14" rx="2"/>
+            <rect x="120" y="128" width="60" height="14" rx="2"/><rect x="220" y="128" width="60" height="14" rx="2"/>
+            <rect x="120" y="150" width="60" height="14" rx="2"/><rect x="220" y="150" width="60" height="14" rx="2"/>
+            <rect x="120" y="172" width="60" height="14" rx="2"/><rect x="220" y="172" width="60" height="14" rx="2"/>
+            <rect x="120" y="194" width="60" height="14" rx="2"/><rect x="220" y="194" width="60" height="14" rx="2"/>
+          </g>
+          <g fill="var(--acc)"><rect x="124" y="88" width="18" height="6" rx="1"/><rect x="224" y="88" width="18" height="6" rx="1"/><rect x="124" y="110" width="18" height="6" rx="1"/><rect x="224" y="110" width="18" height="6" rx="1"/><rect x="124" y="132" width="18" height="6" rx="1"/><rect x="224" y="132" width="18" height="6" rx="1"/><rect x="124" y="154" width="18" height="6" rx="1"/><rect x="224" y="154" width="18" height="6" rx="1"/><rect x="124" y="176" width="18" height="6" rx="1"/><rect x="224" y="176" width="18" height="6" rx="1"/><rect x="124" y="198" width="18" height="6" rx="1"/><rect x="224" y="198" width="18" height="6" rx="1"/></g>
+          <g fill="none" stroke-width="3.5" stroke-linecap="round">
+            <path d="M200 70v160" stroke="#1f2227"/>
+            <path d="M190 72v150" stroke="#111"/><path d="M210 72v150" stroke="#e8e8e8"/>
+          </g>
+          <g fill="#e6e6e6" stroke="none"><rect x="120" y="224" width="60" height="8" rx="1"/><rect x="220" y="224" width="60" height="8" rx="1"/><rect x="120" y="238" width="60" height="8" rx="1"/><rect x="220" y="238" width="60" height="8" rx="1"/></g>
+        </svg>
+        <div class="bar" aria-hidden="true"></div>
+        <span class="tag l">Before</span><span class="tag r">After</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare before and after" id="cmpRange">
+      </div>
+      <p class="cap rv">Left: 1978 box, double-tapped neutrals, pencil labels. Right: 200A Square D, printed labels, passed inspection.</p>
+      <div class="ba-copy">
+        <h2 class="rv">What a one-day panel swap looks like.</h2>
+        <p class="rv">Drag the handle. The left side is a real pattern we see every week in Tech Terrace and Heart of Lubbock: a 1978 box, double-tapped neutrals, labels in pencil. The right side is how we hand it back. (Illustration, not a photo.)</p>
+        <ul class="rv">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span>Permit pulled and inspection passed before we invoice</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span>Power off for about four hours, not a weekend</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span>Room left on the bus bar for the charger or the hot tub</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="owner">
+  <div class="wrap owner">
+    <div>
+      <div class="owner-card rv">
+        <div class="av" aria-hidden="true">DR</div>
+        <div><b>Danny Ruiz</b><span>Owner and master electrician. Grew up in Slaton, lives off 82nd.</span></div>
+      </div>
+      <blockquote class="rv">"I started with one truck and a trailer in 2014. I still do the quotes myself because the number I give you is the number you pay."</blockquote>
+    </div>
+    <div class="stats rv" id="stats">
+      <div><b data-n="1412">0</b><span>jobs finished</span></div>
+      <div><b data-n="387">0</b><span>panels upgraded</span></div>
+      <div><b data-n="214">0</b><span>EV chargers hung</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews">
+  <div class="wrap">
+    <div class="sec-h">
+      <h2 class="rv">What neighbors say.</h2>
+      <p class="lede rv">These three are placeholders for the demo. Real ones get pulled in from Google when the site goes live.</p>
+    </div>
+    <div class="revs">
+      <article class="rev rv"><span class="sample">Sample review</span><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
+        <p>Our panel was the old Federal Pacific kind the home inspector flagged. Danny quoted it off a photo I texted, showed up Tuesday at 8, done by 3. Every breaker labeled.</p><footer><b>Teresa M.</b>, Tech Terrace</footer></article>
+      <article class="rev rv"><span class="sample">Sample review</span><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
+        <p>Level 2 charger in the garage for the Lightning. Half a day, conduit run looks clean, and he set up the app with me before he left. Price matched the text quote.</p><footer><b>Brent K.</b>, Wolfforth</footer></article>
+      <article class="rev rv"><span class="sample">Sample review</span><div class="stars" aria-label="5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.6 7 .8-5.2 4.9 1.4 7L12 17.8 5.8 21.3l1.4-7L2 9.4l7-.8z"/></svg></div>
+        <p>The solar company that sold us the system stopped answering. Caprock finished the tie-in, dealt with LP&amp;L, and we passed inspection first try.</p><footer><b>The Okafors</b>, South Lubbock</footer></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="area">
+  <div class="wrap area">
+    <svg class="map rv" viewBox="0 0 520 440" role="img" aria-label="Map of the service area: Lubbock and the towns around it within about 30 miles">
+      <circle class="ring" cx="260" cy="220" r="200"/>
+      <circle class="ring" cx="260" cy="220" r="120"/>
+      <path class="loop" d="M260 170c38 0 62 20 62 50s-24 50-62 50-62-20-62-50 24-50 62-50z"/>
+      <text x="260" y="224" text-anchor="middle" style="fill:var(--ink);font-size:24px;font-weight:600">Lubbock</text>
+      <text x="260" y="300" text-anchor="middle" style="font-size:15px">Loop 289: no trip charge</text>
+      <g class="town">
+        <circle cx="120" cy="330" r="6"/><text x="120" y="356" text-anchor="middle">Wolfforth</text>
+        <circle cx="140" cy="140" r="6"/><text x="140" y="128" text-anchor="middle">Shallowater</text>
+        <circle cx="385" cy="118" r="6"/><text x="385" y="106" text-anchor="middle">Idalou</text>
+        <circle cx="370" cy="320" r="6"/><text x="370" y="345" text-anchor="middle">Slaton</text>
+        <circle cx="420" cy="200" r="6"/><text x="420" y="188" text-anchor="middle">Ransom Canyon</text>
+        <circle cx="270" cy="50" r="6"/><text x="270" y="38" text-anchor="middle">Abernathy</text>
+        <circle cx="60" cy="215" r="6"/><text x="60" y="241" text-anchor="middle">Levelland</text>
+        <circle cx="250" cy="395" r="6"/><text x="250" y="420" text-anchor="middle">Woodrow</text>
+      </g>
+    </svg>
+    <div>
+      <h2 class="rv">Lubbock and about thirty miles out.</h2>
+      <p class="rv">Inside Loop 289 there is no trip charge. Outside it we add $35 for the drive, and we waive it if you book the work.</p>
+      <ul class="towns rv"><li>Lubbock</li><li>Wolfforth</li><li>Shallowater</li><li>Idalou</li><li>Slaton</li><li>Ransom Canyon</li><li>Abernathy</li><li>Levelland</li><li>Woodrow</li><li>New Deal</li></ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <h2>Send the photo. Get the number.</h2>
+    <a class="phone" href="tel:+18065550142">(806) 555-0142</a>
+    <p>Call during the day and a person picks up. Text any time, with a picture of the panel if you have one, and you'll have a quote before dinner.</p>
+    <div class="ctas">
+      <a class="btn btn-dark" href="tel:+18065550142"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call now</a>
+      <a class="btn btn-line" href="sms:+18065550142?&body=Hi%20Danny%2C%20here%27s%20a%20photo%20of%20my%20panel."><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text us</a>
+    </div>
+    <div class="hours">
+      <div><span>Monday to Friday</span><span>7am to 6pm</span></div>
+      <div><span>Saturday</span><span>8am to 2pm</span></div>
+    </div>
+    <p class="after">After hours, call anyway. If it's sparking, we come.</p>
+  </div>
+</section>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div>Caprock Electric &amp; Solar is a fictional business built as a model site. The name, license number, phone number, and reviews are placeholders. <br>Demo by <a href="#">Simply AI Solutions</a>, Lubbock and DFW.</div>
+    <div>Texas TECL 55-0142<br>Lubbock, TX</div>
+  </div>
+</footer>
+
+<div class="pal" id="pal">
+  <button type="button" id="palBtn" aria-expanded="false" aria-controls="palSw">Colors</button>
+  <span id="palSw" style="display:contents">
+    <button type="button" class="sw amber" data-pal="amber" aria-label="Amber" aria-pressed="true"></button>
+    <button type="button" class="sw copper" data-pal="copper" aria-label="Copper" aria-pressed="false"></button>
+    <button type="button" class="sw sky" data-pal="sky" aria-label="Sky" aria-pressed="false"></button>
+  </span>
+</div>
+
+<script>
+(function(){
+  var d=document,root=d.documentElement,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // palette
+  var pal=d.getElementById('pal'),palBtn=d.getElementById('palBtn');
+  function setPal(p){root.setAttribute('data-pal',p);pal.querySelectorAll('.sw').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.pal===p))});try{localStorage.setItem('caprock-pal',p)}catch(e){}}
+  try{var sp=localStorage.getItem('caprock-pal');if(sp)setPal(sp)}catch(e){}
+  palBtn.addEventListener('click',function(){var o=pal.classList.toggle('open');palBtn.setAttribute('aria-expanded',String(o))});
+  pal.querySelectorAll('.sw').forEach(function(b){b.addEventListener('click',function(){setPal(b.dataset.pal)})});
+
+  // load sequence
+  requestAnimationFrame(function(){requestAnimationFrame(function(){d.body.classList.add('ready')})});
+
+  // header line
+  var hdr=d.querySelector('.hdr');
+  function onS(){hdr.classList.toggle('on',scrollY>8)}
+  addEventListener('scroll',onS,{passive:true});onS();
+
+  // reveals, once
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{rootMargin:'0px 0px 120px 0px',threshold:0});
+  d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  // counters, once
+  var stats=d.getElementById('stats');
+  var sio=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;sio.disconnect();
+    stats.querySelectorAll('b').forEach(function(b){var n=+b.dataset.n,suf=b.dataset.suf||'';if(rm){b.textContent=n.toLocaleString()+suf;return}
+      var t0=performance.now(),dur=1400;(function tick(t){var p=Math.min(1,(t-t0)/dur);p=1-Math.pow(1-p,3);b.textContent=Math.round(n*p).toLocaleString()+suf;if(p<1)requestAnimationFrame(tick)})(t0)})},{threshold:.5});
+  sio.observe(stats);
+
+  // process wire fill
+  var steps=d.getElementById('steps'),fill=d.getElementById('wirefill'),stepEls=steps.querySelectorAll('.step'),horiz=matchMedia('(min-width:900px)');
+  function wire(){var r=steps.getBoundingClientRect(),vh=innerHeight;var p=(vh*.75-r.top)/r.height;p=Math.max(0,Math.min(1,p));
+    if(horiz.matches){fill.style.width=(p*100)+'%';fill.style.height='100%'}else{fill.style.height=(p*100)+'%';fill.style.width='100%'}
+    stepEls.forEach(function(s,i){s.classList.toggle('lit',p>=(i+.5)/stepEls.length-.12)})}
+  if(rm){fill.style.width='100%';fill.style.height='100%';stepEls.forEach(function(s){s.classList.add('lit')})}
+  else{var tk=false;addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(function(){wire();tk=false})}},{passive:true});addEventListener('resize',wire);wire()}
+
+  // before / after
+  var cmp=d.getElementById('cmp'),rng=d.getElementById('cmpRange');
+  rng.addEventListener('input',function(){cmp.style.setProperty('--x',rng.value+'%')});
+})();
+</script>
+</body>
+</html>
