@@ -98,6 +98,8 @@ svg.i{width:20px;height:20px;flex:none}
 .top .actions{display:flex;align-items:center;gap:.6rem}
 .call-top{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;padding:0 .9rem;border-radius:10px;box-shadow:inset 0 0 0 1.5px var(--line);text-decoration:none;font-weight:600;font-size:.95rem;font-variant-numeric:tabular-nums;background:var(--paper)}
 .call-top .num{display:none}
+@media (max-width:559px){.call-top{width:46px;height:46px;padding:0;justify-content:center;border-radius:50%;background:var(--ink);color:#fff;box-shadow:none}.call-top .word{display:none}.call-top .i-call{width:22px;height:22px}}
+.i-call{width:1.15em;height:1.15em;flex:none}
 .top .btn{display:none;min-height:44px;padding:.5rem 1.1rem;font-size:var(--step--1)}
 @media (min-width:560px){.call-top .num{display:inline}.call-top .word{display:none}}
 @media (min-width:960px){.top nav{display:flex}.top .btn{display:inline-flex}}
@@ -350,7 +352,7 @@ body.bar-on .pal{bottom:calc(84px + env(safe-area-inset-bottom))}
     </nav>
     <div class="actions">
       <a class="call-top" href="tel:+18065550142" aria-label="Call (806) 555-0142">
-        <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.6 4.2-2.2 1.4a11 11 0 0 0 6.5 6.5l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>
+        <svg class="i i-call" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
         <span class="word">Call</span><span class="num">(806) 555-0142</span>
       </a>
       <a class="btn" href="#book">Book a visit</a>
@@ -378,7 +380,7 @@ body.bar-on .pal{bottom:calc(84px + env(safe-area-inset-bottom))}
         <div class="cta">
           <a class="btn" href="#book" id="heroBook">Book a visit</a>
           <a class="btn line" href="tel:+18065550142">
-            <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.6 4.2-2.2 1.4a11 11 0 0 0 6.5 6.5l1.4-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>
+            <svg class="i i-call" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
             <span class="lg">Call (806) 555-0142</span><span class="sm">Call Danny</span>
           </a>
         </div>
@@ -661,7 +663,7 @@ body.bar-on .pal{bottom:calc(84px + env(safe-area-inset-bottom))}
 </div>
 
 <div class="bar" id="bar" aria-hidden="true">
-  <a class="btn line" href="tel:+18065550142" tabindex="-1">Call</a>
+  <a class="btn line" href="tel:+18065550142" tabindex="-1" aria-label="Call"><svg class="i i-call" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>Call</a>
   <a class="btn" href="#book" tabindex="-1">Book a visit</a>
 </div>
 
