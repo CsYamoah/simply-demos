@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Boss Made Kustomz · Mobile Car Wash, Lubbock (site preview)</title>
+<meta name="description" content="Preview of a one-page site for Boss Made Kustomz, mobile car wash in Lubbock, Texas.">
+<meta name="theme-color" content="#0C0D0F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0D0F'/%3E%3Cpath d='M9 7h8a5 5 0 0 1 3 9 5.5 5.5 0 0 1-3 9H9zm4 4v4h4a2 2 0 0 0 0-4zm0 7v4h4.5a2 2 0 0 0 0-4z' fill='%23FFC21A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* One column, phone-first. Black body, one loud yellow. Sticky call/text bar at the bottom. */
+:root{
+  --bg:#0C0D0F;--panel:#15171B;--panel-2:#1C1F24;--line:#2A2E35;
+  --ink:#F3F1EA;--mute:#A3A7AE;--acc:#FFC21A;--acc-ink:#0C0D0F;
+  --disp:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  --gut:clamp(18px,5vw,40px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);-webkit-font-smoothing:antialiased;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:var(--gut)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+
+/* preview ribbon: makes clear this is a mockup, not the live site */
+.ribbon{background:var(--acc);color:var(--acc-ink);font-size:13.5px;font-weight:600;text-align:center;padding:8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px}
+.brand{font-family:var(--disp);font-weight:900;font-size:26px;letter-spacing:.02em;text-transform:uppercase;line-height:1;text-decoration:none}
+.brand span{color:var(--acc)}
+.top a.num{font-weight:700;font-size:15px;text-decoration:none;font-variant-numeric:tabular-nums;border:1.5px solid var(--line);border-radius:999px;padding:9px 14px;white-space:nowrap}
+
+.hero{padding-block:clamp(28px,7vw,72px) clamp(36px,8vw,80px);position:relative;overflow:hidden}
+.kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
+h1{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:clamp(64px,19vw,168px);line-height:.86;letter-spacing:-.005em}
+h1 em{font-style:normal;color:transparent;-webkit-text-stroke:2px var(--acc)}
+.lede{font-size:clamp(18px,2.6vw,22px);color:var(--mute);max-width:34ch;margin-top:22px}
+.lede b{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:54px;padding:0 22px;border-radius:12px;font-weight:700;font-size:17px;text-decoration:none;flex:1 1 150px;max-width:260px;white-space:nowrap}
+@media (max-width:420px){.btn{padding:0 14px;font-size:16px}}
+.btn.solid{background:var(--acc);color:var(--acc-ink)}
+.btn.line{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn svg{width:20px;height:20px;flex:none}
+.price{position:absolute;right:var(--gut);top:clamp(20px,5vw,60px);width:112px;height:112px;border-radius:50%;background:var(--acc);color:var(--acc-ink);display:grid;place-content:center;text-align:center;transform:rotate(9deg);font-weight:700;font-size:12px;line-height:1.1;text-transform:uppercase;letter-spacing:.06em}
+.price b{display:block;font-family:var(--disp);font-weight:900;font-size:46px;line-height:.9;letter-spacing:0}
+@media (max-width:520px){.price{width:88px;height:88px;font-size:10px;top:152px}.price b{font-size:36px}}
+
+/* stripe divider, like hazard tape */
+.tape{height:14px;background:repeating-linear-gradient(-45deg,var(--acc) 0 14px,var(--bg) 14px 28px)}
+
+section{padding-block:clamp(44px,8vw,88px)}
+h2{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:clamp(38px,8vw,64px);line-height:.95;margin-bottom:8px}
+.sub{color:var(--mute);max-width:52ch;margin-bottom:26px}
+
+.steps{display:grid;gap:12px;counter-reset:s;padding:0;margin:0;list-style:none}
+.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 18px 18px 74px;position:relative;min-height:76px}
+.steps li::before{content:counter(s);position:absolute;left:18px;top:14px;font-family:var(--disp);font-weight:900;font-size:48px;line-height:1;color:var(--acc)}
+.steps b{display:block;font-size:18px}
+.steps span{color:var(--mute);font-size:15.5px}
+@media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+.menu{display:grid;gap:12px}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:baseline}
+.item h3{font-size:20px;font-weight:700}
+.item .p{font-family:var(--disp);font-weight:900;font-size:30px;color:var(--acc);white-space:nowrap}
+.item .p.tbd{font-family:var(--body);font-size:13px;font-weight:600;color:var(--mute);border:1px dashed var(--line);border-radius:999px;padding:4px 10px}
+.item p{grid-column:1/-1;color:var(--mute);font-size:15.5px}
+.note{margin-top:14px;font-size:14px;color:var(--mute);border-left:3px solid var(--acc);padding-left:12px}
+@media (min-width:760px){.menu{grid-template-columns:repeat(3,1fr)}.item{grid-template-columns:1fr;align-content:start}.item p{grid-column:auto}}
+
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.shot{aspect-ratio:4/3;border-radius:14px;background:var(--panel-2);border:1px dashed var(--line);display:grid;place-content:center;text-align:center;color:var(--mute);font-size:14px;padding:12px}
+.shot:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.shot b{display:block;color:var(--ink);font-size:15px}
+
+.area{background:var(--panel);border-block:1px solid var(--line)}
+.area .wrap{display:grid;gap:22px}
+.facts{display:grid;gap:10px;padding:0;margin:0;list-style:none}
+.facts li{display:flex;gap:12px;align-items:flex-start}
+.facts li::before{content:"";width:10px;height:10px;margin-top:8px;background:var(--acc);border-radius:2px;flex:none;transform:rotate(45deg)}
+@media (min-width:760px){.area .wrap{grid-template-columns:1fr 1fr;align-items:center}}
+
+.book{text-align:center}
+.book h2{font-size:clamp(46px,11vw,96px)}
+.book .big{display:inline-block;font-family:var(--disp);font-weight:900;font-size:clamp(44px,11vw,88px);line-height:1;color:var(--acc);text-decoration:none;margin:10px 0 6px;font-variant-numeric:tabular-nums}
+.book p{color:var(--mute)}
+
+footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;color:var(--mute)}
+footer a{color:var(--ink)}
+
+/* sticky call/text bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:10px;padding:12px var(--gut) calc(12px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.bar .btn{flex:1;max-width:none;min-height:52px}
+@media (min-width:900px){.bar{display:none}body{padding-bottom:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Site preview built for Boss Made Kustomz. Not live yet.</div>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#top">Boss Made <span>Kustomz</span></a>
+    <a class="num" href="tel:+18063172197">806-317-2197</a>
+  </header>
+</div>
+
+<main id="top">
+  <div class="wrap hero">
+    <span class="kicker">Mobile car wash · Lubbock, TX</span>
+    <h1>We pull up.<br><em>You stay put.</em></h1>
+    <p class="lede"><b>Boss Made Kustomz</b> washes your car at your house or your job. No line, no drive, no wasted Saturday.</p>
+    <div class="cta">
+      <a class="btn solid" href="sms:+18063172197?&body=Hey%2C%20I%20want%20to%20book%20a%20wash.">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+        Text to book
+      </a>
+      <a class="btn line" href="tel:+18063172197">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        Call Frank
+      </a>
+    </div>
+    <div class="price" aria-label="Washes from 25 dollars">Washes from<b>$25</b></div>
+  </div>
+
+  <div class="tape" aria-hidden="true"></div>
+
+  <section>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Three steps. Most people book in one text.</p>
+      <ol class="steps">
+        <li><b>Text or call</b><span>Tell us what you drive and what it needs.</span></li>
+        <li><b>Pick a time and a spot</b><span>Driveway, apartment lot, or your job.</span></li>
+        <li><b>We pull up and wash</b><span>You keep doing what you were doing.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2>The menu</h2>
+      <p class="sub">Clear packages so nobody has to message you asking "how much."</p>
+      <div class="menu">
+        <div class="item"><h3>Mobile wash</h3><span class="p">From $25</span><p>The wash you already post about, done where the car is parked.</p></div>
+        <div class="item"><h3>Inside and out</h3><span class="p tbd">Your price</span><p>Sample package. Wash plus the interior.</p></div>
+        <div class="item"><h3>Full detail</h3><span class="p tbd">Your price</span><p>Sample package. The works, for when it has been a while.</p></div>
+      </div>
+      <p class="note">Frank: the last two are placeholders. Send me your real packages and prices and they go in the same day.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2>The work</h2>
+      <p class="sub">Your before and afters sell this better than any words. They go right here.</p>
+      <div class="shots">
+        <div class="shot"><div><b>Your best before / after</b>Photo goes here</div></div>
+        <div class="shot"><div><b>Your photo</b>Goes here</div></div>
+        <div class="shot"><div><b>Your photo</b>Goes here</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="area">
+    <div class="wrap">
+      <div>
+        <h2>Lubbock, we come to you</h2>
+        <p class="sub" style="margin-bottom:0">One link to drop in every post, so people can book without scrolling back to find your number.</p>
+      </div>
+      <ul class="facts">
+        <li><span><b>Mobile.</b> Home, work, wherever the car is.</span></li>
+        <li><span><b>Washes from $25.</b></span></li>
+        <li><span><b>Book by text.</b> One tap from this page.</span></li>
+        <li><span><b>Shows up on Google</b> when someone searches mobile car wash in Lubbock.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="book">
+    <div class="wrap">
+      <h2>Get it clean</h2>
+      <a class="big" href="tel:+18063172197">806-317-2197</a>
+      <p>Call or text Frank at Boss Made Kustomz.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Preview by Mills Yamoah, Simply AI Solutions · <a href="https://simplyaitx.com">simplyaitx.com</a> · <a href="tel:+12148430157">(214) 843-0157</a></div>
+</footer>
+
+<div class="bar">
+  <a class="btn solid" href="sms:+18063172197?&body=Hey%2C%20I%20want%20to%20book%20a%20wash.">Text to book</a>
+  <a class="btn line" href="tel:+18063172197">Call</a>
+</div>
+
+</body>
+</html>
