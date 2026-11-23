@@ -1,207 +1,656 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-palette="navy">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Boss Made Kustomz · Mobile Car Wash, Lubbock (site preview)</title>
 <meta name="description" content="Preview of a one-page site for Boss Made Kustomz, mobile car wash in Lubbock, Texas.">
-<meta name="theme-color" content="#0C0D0F">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230C0D0F'/%3E%3Cpath d='M9 7h8a5 5 0 0 1 3 9 5.5 5.5 0 0 1-3 9H9zm4 4v4h4a2 2 0 0 0 0-4zm0 7v4h4.5a2 2 0 0 0 0-4z' fill='%23FFC21A'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#F5F3EE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2318273D'/%3E%3Cpath d='M16 5c4 5 7 8.6 7 12.5a7 7 0 0 1-14 0C9 13.6 12 10 16 5z' fill='%23E3A21A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..700&family=Newsreader:ital,opsz,wght@1,6..72,400..500&display=swap" rel="stylesheet">
 <style>
-/* One column, phone-first. Black body, one loud yellow. Sticky call/text bar at the bottom. */
 :root{
-  --bg:#0C0D0F;--panel:#15171B;--panel-2:#1C1F24;--line:#2A2E35;
-  --ink:#F3F1EA;--mute:#A3A7AE;--acc:#FFC21A;--acc-ink:#0C0D0F;
-  --disp:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
-  --body:"Instrument Sans",system-ui,-apple-system,sans-serif;
-  --gut:clamp(18px,5vw,40px);
+  --page:#F5F3EE;
+  --paper:#FFFFFF;
+  --ink:#18273D;
+  --ink-2:#22344F;
+  --muted:#566173;
+  --line:#DCD8CF;
+  --wash:#ECE9E1;
+  --star:#E3A21A;
+  --star-soft:#F7E7C2;
+  --star-ink:#8A5F05;
+
+  --sans:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif:"Newsreader", Georgia, "Times New Roman", serif;
+
+  --step--1: clamp(.875rem, .85rem + .1vw, .9375rem);
+  --step-0: clamp(1.0625rem, 1.04rem + .1vw, 1.125rem);
+  --step-1: clamp(1.2rem, 1.15rem + .22vw, 1.35rem);
+  --step-2: clamp(1.4rem, 1.29rem + .45vw, 1.7rem);
+  --step-3: clamp(1.7rem, 1.48rem + .9vw, 2.3rem);
+  --step-4: clamp(2.05rem, 1.67rem + 1.55vw, 3.1rem);
+  --step-5: clamp(2.35rem, 1.75rem + 2.45vw, 4rem);
+
+  --space-s: clamp(1rem, .8rem + .9vw, 1.5rem);
+  --space-m: clamp(1.5rem, 1.2rem + 1.35vw, 2.25rem);
+  --space-l: clamp(2.5rem, 1.85rem + 2.7vw, 4rem);
+  --space-xl: clamp(4rem, 2.7rem + 5.4vw, 7rem);
+
+  --gutter: clamp(1rem, .2rem + 3.6vw, 4rem);
+  --radius: 14px;
+  --ease-out: cubic-bezier(.16,1,.3,1);
 }
+html[data-palette="forest"]{
+  --ink:#1E3A2F; --ink-2:#2A4A3D; --muted:#56635C; --star:#C99A2E; --star-soft:#F1E5C4; --star-ink:#7A5A0C; --page:#F4F3EE; --wash:#E9E8DF;
+}
+html[data-palette="copper"]{
+  --ink:#26384F; --ink-2:#32475F; --muted:#5A6472; --star:#B9682F; --star-soft:#F2DCCB; --star-ink:#7E4114; --page:#F6F3EF; --wash:#ECE6DF;
+}
+
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--body);-webkit-font-smoothing:antialiased;padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-a{color:inherit}
-h1,h2,h3,p{margin:0}
-.wrap{max-width:1040px;margin:0 auto;padding-inline:var(--gut)}
-:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  margin:0;background:var(--page);color:var(--ink);
+  font-family:var(--sans);font-size:var(--step-0);line-height:1.55;
+  font-variation-settings:"wdth" 100;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0;font-weight:640;line-height:1.08;font-variation-settings:"wdth" 118;letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:var(--step-4)}
+h3{font-size:var(--step-1);line-height:1.25}
+p{margin:0;text-wrap:pretty}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1px}
+ul,ol{list-style:none;margin:0;padding:0}
+button,input,textarea{font:inherit;color:inherit}
+button{background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1200px;margin-inline:auto;padding-inline:var(--gutter)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+svg.i{width:20px;height:20px;flex:none}
 
-/* preview ribbon: makes clear this is a mockup, not the live site */
-.ribbon{background:var(--acc);color:var(--acc-ink);font-size:13.5px;font-weight:600;text-align:center;padding:8px var(--gut);padding-top:calc(8px + env(safe-area-inset-top,0px))}
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-height:52px;padding:.8rem 1.4rem;border-radius:10px;
+  background:var(--ink);color:var(--page);
+  font-weight:600;font-size:var(--step-0);text-decoration:none;
+  font-variation-settings:"wdth" 104;
+  transition:background .25s,box-shadow .25s;
+}
+.btn:hover{background:var(--ink-2)}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.line:hover{background:var(--wash)}
 
-header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px}
-.brand{font-family:var(--disp);font-weight:900;font-size:26px;letter-spacing:.02em;text-transform:uppercase;line-height:1;text-decoration:none}
-.brand span{color:var(--acc)}
-.top a.num{font-weight:700;font-size:15px;text-decoration:none;font-variant-numeric:tabular-nums;border:1.5px solid var(--line);border-radius:999px;padding:9px 14px;white-space:nowrap}
+/* header */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--page) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+.brand{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;min-height:44px}
+.brand-mark{width:34px;height:34px;flex:none}
+.brand b{font-weight:680;font-size:1.12rem;font-variation-settings:"wdth" 122;letter-spacing:-.005em;line-height:1}
+.brand small{display:block;font-size:.75rem;color:var(--muted);font-weight:450;margin-top:3px;letter-spacing:.01em}
+.top nav{display:none;gap:1.6rem}
+.top nav a{text-decoration:none;color:var(--muted);font-size:var(--step--1);padding:.6rem 0;min-height:44px;display:inline-flex;align-items:center}
+.top nav a:hover{color:var(--ink)}
+.top .actions{display:flex;align-items:center;gap:.6rem}
+.call-top{display:inline-flex;align-items:center;gap:.45rem;min-height:44px;padding:0 .9rem;border-radius:10px;box-shadow:inset 0 0 0 1.5px var(--line);text-decoration:none;font-weight:600;font-size:.95rem;font-variant-numeric:tabular-nums;background:var(--paper)}
+.call-top .num{display:none}
+@media (max-width:559px){.call-top{width:46px;height:46px;padding:0;justify-content:center;border-radius:50%;background:var(--ink);color:#fff;box-shadow:none}.call-top .word{display:none}.call-top .i-call{width:22px;height:22px}}
+.i-call{width:1.15em;height:1.15em;flex:none}
+.top .btn{display:none;min-height:44px;padding:.5rem 1.1rem;font-size:var(--step--1)}
+@media (min-width:560px){.call-top .num{display:inline}.call-top .word{display:none}}
+@media (min-width:960px){.top nav{display:flex}.top .btn{display:inline-flex}}
 
-.hero{padding-block:clamp(28px,7vw,72px) clamp(36px,8vw,80px);position:relative;overflow:hidden}
-.kicker{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
-h1{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:clamp(64px,19vw,168px);line-height:.86;letter-spacing:-.005em}
-h1 em{font-style:normal;color:transparent;-webkit-text-stroke:2px var(--acc)}
-.lede{font-size:clamp(18px,2.6vw,22px);color:var(--mute);max-width:34ch;margin-top:22px}
-.lede b{color:var(--ink);font-weight:600}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:54px;padding:0 22px;border-radius:12px;font-weight:700;font-size:17px;text-decoration:none;flex:1 1 150px;max-width:260px;white-space:nowrap}
-@media (max-width:420px){.btn{padding:0 14px;font-size:16px}}
-.btn.solid{background:var(--acc);color:var(--acc-ink)}
-.btn.line{box-shadow:inset 0 0 0 1.5px var(--ink)}
-.btn svg{width:20px;height:20px;flex:none}
-.price{position:absolute;right:var(--gut);top:clamp(20px,5vw,60px);width:112px;height:112px;border-radius:50%;background:var(--acc);color:var(--acc-ink);display:grid;place-content:center;text-align:center;transform:rotate(9deg);font-weight:700;font-size:12px;line-height:1.1;text-transform:uppercase;letter-spacing:.06em}
-.price b{display:block;font-family:var(--disp);font-weight:900;font-size:46px;line-height:.9;letter-spacing:0}
-@media (max-width:520px){.price{width:88px;height:88px;font-size:10px;top:152px}.price b{font-size:36px}}
+/* hero */
+.hero{padding-block:var(--space-l) 0;position:relative}
+.hero-grid{display:grid;gap:var(--space-l);align-items:center}
+.hero h1{font-size:var(--step-5);font-weight:660;line-height:1.02;max-width:14ch;letter-spacing:-.018em}
+.hero .lede{margin-top:var(--space-s);font-size:var(--step-1);color:var(--muted);max-width:36ch;line-height:1.5}
+.rating{display:inline-flex;align-items:center;gap:.7rem;margin-top:var(--space-m);text-decoration:none;padding:.35rem 0;min-height:44px}
+.rating .score{font-weight:700;font-size:1.25rem;font-variant-numeric:tabular-nums;font-variation-settings:"wdth" 110}
+.rating .count{color:var(--muted);font-size:var(--step--1);line-height:1.3}
+.rating .count u{text-decoration-color:var(--line);text-underline-offset:.22em}
+.rating:hover .count u{text-decoration-color:var(--ink)}
+.stars{display:inline-flex;gap:2px}
+.stars svg{width:18px;height:18px}
+.stars .bg{fill:var(--line)}
+.stars .fg{fill:var(--star)}
+.hero .stars svg{width:22px;height:22px}
+.hero .stars .fg{clip-path:inset(0 100% 0 0);animation:fill .5s var(--ease-out) forwards}
+.hero .stars svg:nth-child(1) .fg{animation-delay:.35s}
+.hero .stars svg:nth-child(2) .fg{animation-delay:.47s}
+.hero .stars svg:nth-child(3) .fg{animation-delay:.59s}
+.hero .stars svg:nth-child(4) .fg{animation-delay:.71s}
+.hero .stars svg:nth-child(5) .fg{animation-delay:.83s;--to:10%}
+@keyframes fill{to{clip-path:inset(0 var(--to,0%) 0 0)}}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:var(--space-m)}
+.cta .btn{flex:1 1 140px}
+.cta .lg{display:none}
+@media (min-width:560px){.cta .lg{display:inline}.cta .sm{display:none}}
+@media (min-width:560px){.cta .btn{flex:0 0 auto}}
 
-/* stripe divider, like hazard tape */
-.tape{height:14px;background:repeating-linear-gradient(-45deg,var(--acc) 0 14px,var(--bg) 14px 28px)}
+.proof{position:relative;max-width:460px;width:100%;justify-self:end}
+.card{background:var(--paper);border-radius:var(--radius);padding:1.4rem 1.4rem 1.25rem;box-shadow:0 1px 0 rgba(24,39,61,.04),0 12px 32px -18px rgba(24,39,61,.28);border:1px solid rgba(24,39,61,.06)}
+.proof .card{position:relative;z-index:2}
+.proof .under{display:none;position:absolute;inset:14px -10px -14px 10px;border-radius:var(--radius);background:var(--wash);border:1px solid rgba(24,39,61,.06);z-index:1;transform:rotate(1.6deg)}
+.who{display:flex;align-items:center;gap:.75rem}
+.who .av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:650;font-size:.95rem;flex:none;background:var(--star-soft);color:var(--star-ink);font-variation-settings:"wdth" 112}
+.who b{display:block;font-weight:600;line-height:1.25}
+.who span{display:block;color:var(--muted);font-size:var(--step--1);line-height:1.3}
+.card .meta{display:flex;align-items:center;gap:.6rem;margin-top:.9rem;font-size:var(--step--1);color:var(--muted)}
+.card blockquote{margin:.6rem 0 0;font-family:var(--serif);font-style:italic;font-weight:420;font-size:clamp(1.12rem,1.05rem + .3vw,1.22rem);line-height:1.42;font-variation-settings:"opsz" 18}
+.card .job{margin-top:1rem;padding-top:.9rem;border-top:1px solid var(--line);font-size:var(--step--1);color:var(--muted);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.card .job b{color:var(--ink);font-weight:550}
+.hero .proof{opacity:0;transform:translateY(8px);animation:rise .9s var(--ease-out) .25s forwards}
+@keyframes rise{to{opacity:1;transform:none}}
 
-section{padding-block:clamp(44px,8vw,88px)}
-h2{font-family:var(--disp);font-weight:900;text-transform:uppercase;font-size:clamp(38px,8vw,64px);line-height:.95;margin-bottom:8px}
-.sub{color:var(--mute);max-width:52ch;margin-bottom:26px}
+/* the horizon: flat Llano Estacado, the caprock edge, a windmill and a power line */
+.horizon{display:block;width:100%;height:clamp(72px,9vw,110px);margin-top:var(--space-l);color:var(--ink)}
+.horizon path,.horizon line,.horizon circle{fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.horizon .land{opacity:.55}
+.horizon .wire{opacity:.4}
+.horizon .draw{stroke-dasharray:var(--len,2000);stroke-dashoffset:var(--len,2000);animation:draw 2.4s var(--ease-out) .3s forwards}
+.horizon .sun{fill:var(--star);stroke:none;opacity:.9}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (min-width:960px){
+  .proof .under{display:block}
+  .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:var(--space-xl)}
+}
 
-.steps{display:grid;gap:12px;counter-reset:s;padding:0;margin:0;list-style:none}
-.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 18px 18px 74px;position:relative;min-height:76px}
-.steps li::before{content:counter(s);position:absolute;left:18px;top:14px;font-family:var(--disp);font-weight:900;font-size:48px;line-height:1;color:var(--acc)}
-.steps b{display:block;font-size:18px}
-.steps span{color:var(--mute);font-size:15.5px}
-@media (min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+/* trust strip */
+.trust{border-block:1px solid var(--line);background:var(--paper)}
+.trust ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.trust li{display:flex;gap:.7rem;align-items:flex-start;padding:1.1rem .25rem 1.1rem 0;font-size:var(--step--1);line-height:1.35}
+.trust li:nth-child(odd){padding-right:1rem}
+.trust li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.trust li:nth-child(even){padding-left:1rem;border-left:1px solid var(--line)}
+.trust b{display:block;font-weight:600;font-size:var(--step-0);color:var(--ink)}
+.trust span{color:var(--muted)}
+.trust svg{width:22px;height:22px;margin-top:2px;color:var(--ink);flex:none}
+@media (min-width:860px){
+  .trust ul{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .trust li{padding:1.4rem 1.25rem!important;border:0!important;border-left:1px solid var(--line)!important}
+  .trust li:first-child{border-left:0!important;padding-left:0!important}
+}
 
-.menu{display:grid;gap:12px}
-.item{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:baseline}
-.item h3{font-size:20px;font-weight:700}
-.item .p{font-family:var(--disp);font-weight:900;font-size:30px;color:var(--acc);white-space:nowrap}
-.item .p.tbd{font-family:var(--body);font-size:13px;font-weight:600;color:var(--mute);border:1px dashed var(--line);border-radius:999px;padding:4px 10px}
-.item p{grid-column:1/-1;color:var(--mute);font-size:15.5px}
-.note{margin-top:14px;font-size:14px;color:var(--mute);border-left:3px solid var(--acc);padding-left:12px}
-@media (min-width:760px){.menu{grid-template-columns:repeat(3,1fr)}.item{grid-template-columns:1fr;align-content:start}.item p{grid-column:auto}}
+/* sections */
+section{padding-block:var(--space-xl)}
+.head{display:grid;gap:var(--space-s);margin-bottom:var(--space-l);max-width:62ch}
+.head p{color:var(--muted);max-width:52ch}
+@media (min-width:960px){
+  .head.split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);max-width:none;align-items:end;gap:var(--space-l)}
+}
 
-.shots{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.shot{aspect-ratio:4/3;border-radius:14px;background:var(--panel-2);border:1px dashed var(--line);display:grid;place-content:center;text-align:center;color:var(--mute);font-size:14px;padding:12px}
-.shot:first-child{grid-column:1/-1;aspect-ratio:16/9}
-.shot b{display:block;color:var(--ink);font-size:15px}
+/* services */
+.svc{border-top:1px solid var(--ink)}
+.svc li{display:grid;gap:.4rem;padding-block:1.5rem 1.6rem;border-bottom:1px solid var(--line)}
+.svc h3{font-size:var(--step-2);font-variation-settings:"wdth" 116}
+.svc p{color:var(--muted);max-width:46ch}
+.svc .price{color:var(--muted);font-size:var(--step--1);font-variant-numeric:tabular-nums;margin-top:.3rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .6rem}
+.svc .price b{font-weight:640;color:var(--ink);font-size:var(--step-1);font-variation-settings:"wdth" 108}
+@media (min-width:860px){
+  .svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--space-l)}
+}
+.svc-foot{margin-top:var(--space-m);display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;color:var(--muted);font-size:var(--step--1);max-width:70ch}
+.svc-foot strong{color:var(--ink);font-weight:600}
 
-.area{background:var(--panel);border-block:1px solid var(--line)}
-.area .wrap{display:grid;gap:22px}
-.facts{display:grid;gap:10px;padding:0;margin:0;list-style:none}
-.facts li{display:flex;gap:12px;align-items:flex-start}
-.facts li::before{content:"";width:10px;height:10px;margin-top:8px;background:var(--acc);border-radius:2px;flex:none;transform:rotate(45deg)}
-@media (min-width:760px){.area .wrap{grid-template-columns:1fr 1fr;align-items:center}}
+/* reviews */
+.reviews{background:var(--paper);border-block:1px solid var(--line)}
+.summary{display:grid;gap:var(--space-m);margin-bottom:var(--space-l);align-items:end}
+.summary .big{display:flex;align-items:flex-end;gap:1rem}
+.summary .num{font-size:clamp(4rem,3rem + 4vw,6rem);font-weight:680;line-height:.85;font-variation-settings:"wdth" 112;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.summary .of{padding-bottom:.25rem}
+.summary .of p{color:var(--muted);font-size:var(--step--1);margin-top:.3rem}
+.dist{display:grid;gap:.4rem;max-width:380px;width:100%;font-size:var(--step--1);color:var(--muted);font-variant-numeric:tabular-nums}
+.dist div{display:grid;grid-template-columns:2.6em 1fr 2.6em;align-items:center;gap:.7rem}
+.dist i{display:block;height:8px;border-radius:99px;background:var(--wash);overflow:hidden}
+.dist i::before{content:"";display:block;height:100%;width:var(--w);background:var(--star);border-radius:99px;transform-origin:left;transform:scaleX(0);transition:transform 1.1s var(--ease-out)}
+.dist.on i::before{transform:scaleX(1)}
+.dist div:nth-child(2) i::before{transition-delay:.08s}
+.dist div:nth-child(3) i::before{transition-delay:.16s}
+.dist span:last-child{text-align:right}
+@media (min-width:860px){.summary{grid-template-columns:minmax(0,1.3fr) auto minmax(0,300px);gap:var(--space-l)}.summary h2{max-width:none}}
+.rv{display:grid;gap:1rem}
+.rv .card{display:flex;flex-direction:column;box-shadow:none;border:0;border-top:1.5px solid var(--ink);border-radius:0;background:none;padding:1.4rem 0 .5rem}
+.rv .card .job{border-top:0;padding-top:0}
+.rv .card blockquote{font-size:1.2rem;flex:1}
+.rv .card .stars svg{width:16px;height:16px}
+@media (min-width:700px){.rv{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 2.5rem}}
+@media (min-width:1080px){.rv{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.rv-foot{margin-top:var(--space-m);display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+.rv-foot p{color:var(--muted);font-size:var(--step--1);max-width:52ch}
+.more{display:none}
+@media (max-width:699px){
+  .rv .card.extra{display:none}
+  .rv.open .card.extra{display:flex}
+  .more{display:inline-flex}
+  .rv.open + .rv-foot .more{display:none}
+}
 
-.book{text-align:center}
-.book h2{font-size:clamp(46px,11vw,96px)}
-.book .big{display:inline-block;font-family:var(--disp);font-weight:900;font-size:clamp(44px,11vw,88px);line-height:1;color:var(--acc);text-decoration:none;margin:10px 0 6px;font-variant-numeric:tabular-nums}
-.book p{color:var(--mute)}
+/* owner */
+.owner{display:grid;gap:var(--space-l)}
+.portrait{display:flex;gap:1.1rem;align-items:center}
+.mono{width:104px;height:104px;flex:none}
+.portrait b{display:block;font-weight:640;font-size:var(--step-1);font-variation-settings:"wdth" 114}
+.portrait span{display:block;color:var(--muted);font-size:var(--step--1);line-height:1.4}
+.note{display:grid;gap:1rem;max-width:56ch}
+.note p:first-child{font-size:var(--step-1);line-height:1.45}
+.note .sig{font-family:var(--serif);font-style:italic;font-size:1.5rem;font-variation-settings:"opsz" 36;margin-top:.25rem}
+.steps{display:grid;gap:1.4rem;counter-reset:s;margin-top:var(--space-s)}
+.steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:1rem;align-items:start}
+.steps li::before{content:counter(s);width:36px;height:36px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--ink);display:grid;place-items:center;font-weight:650;font-size:.95rem;font-variant-numeric:tabular-nums}
+.steps b{display:block;font-weight:600}
+.steps p{color:var(--muted);font-size:var(--step--1);margin-top:.15rem}
+.owner h3{font-size:var(--step-2)}
+@media (min-width:960px){.owner{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--space-xl)}}
+.side{align-self:start;background:var(--wash);border-radius:var(--radius);padding:var(--space-m)}
 
-footer{border-top:1px solid var(--line);padding-block:26px;font-size:13.5px;color:var(--mute)}
-footer a{color:var(--ink)}
+/* service area */
+.area{display:grid;gap:var(--space-l)}
+.towns{border-top:1px solid var(--ink);columns:1}
+.towns li{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.towns span{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.hoods{color:var(--muted);max-width:52ch}
+.hoods strong{color:var(--ink);font-weight:600}
+@media (min-width:600px){.towns{columns:2;column-gap:2.5rem}}
+@media (min-width:960px){.area{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:start}}
 
-/* sticky call/text bar */
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;gap:10px;padding:12px var(--gut) calc(12px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line)}
-.bar .btn{flex:1;max-width:none;min-height:52px}
-@media (min-width:900px){.bar{display:none}body{padding-bottom:0}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* faq */
+.faq{border-top:1px solid var(--ink)}
+@media (min-width:960px){.faqwrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:var(--space-l);align-items:start}.faqwrap .head{margin-bottom:0}}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.2rem 0;min-height:56px;font-weight:600;font-size:var(--step-1);font-variation-settings:"wdth" 106;line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{width:22px;height:22px;flex:none;transition:transform .3s var(--ease-out)}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq .a{padding:0 0 1.4rem;color:var(--muted);max-width:62ch}
+.faq .a p+p{margin-top:.6rem}
+
+/* booking */
+.book{background:var(--ink);color:var(--page);border-radius:calc(var(--radius) + 6px);padding:var(--space-l) var(--space-m);display:grid;gap:var(--space-l)}
+.book h2{color:var(--page)}
+.book .intro p{color:color-mix(in srgb,var(--page) 78%,var(--ink));margin-top:var(--space-s);max-width:42ch}
+.book .intro a{color:var(--page);font-weight:600;white-space:nowrap;padding:.7rem 0;margin:-.7rem 0;display:inline-block}
+.book .hours{margin-top:var(--space-m);font-size:var(--step--1);color:color-mix(in srgb,var(--page) 70%,var(--ink));display:grid;gap:.3rem}
+form{display:grid;gap:1rem;background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:var(--space-m)}
+@media (max-width:599px){.book{padding:var(--space-l) 1rem 1rem}.book .intro{padding-inline:.5rem}form,.thanks{padding:1.25rem}}
+label{display:grid;gap:.4rem;font-weight:600;font-size:var(--step--1)}
+label small{font-weight:400;color:var(--muted)}
+input,textarea{width:100%;min-height:52px;padding:.8rem .95rem;border-radius:10px;border:1.5px solid var(--line);background:var(--page);font-size:1rem;font-weight:400}
+textarea{min-height:120px;resize:vertical;line-height:1.5}
+input:focus,textarea:focus{outline:none;border-color:var(--ink);background:var(--paper)}
+input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#B3261E}
+.err{color:#B3261E;font-weight:500;font-size:.85rem;min-height:0}
+form .btn{width:100%;margin-top:.25rem}
+form .fine{font-size:.82rem;color:var(--muted);line-height:1.45}
+.thanks{display:none;background:var(--paper);color:var(--ink);border-radius:var(--radius);padding:var(--space-m)}
+.thanks h3{font-size:var(--step-2)}
+.thanks p{color:var(--muted);margin-top:.6rem}
+.thanks .check{width:44px;height:44px;border-radius:50%;background:var(--star-soft);display:grid;place-items:center;margin-bottom:1rem}
+.sent form{display:none}.sent .thanks{display:block;animation:rise .5s var(--ease-out) both;opacity:0;transform:translateY(6px)}
+@media (min-width:960px){.book{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:var(--space-l);align-items:start}}
+
+/* footer */
+footer{padding-block:var(--space-l) calc(var(--space-l) + 80px);color:var(--muted);font-size:var(--step--1)}
+footer .row{display:grid;gap:1.5rem}
+footer .brand{color:var(--ink)}
+footer p{line-height:1.6}
+footer a{display:inline-block;padding:.7rem 0;margin:-.35rem 0}
+@media (min-width:860px){footer{padding-bottom:var(--space-l)}footer .row{grid-template-columns:1.2fr 1fr 1fr;align-items:start}}
+
+/* palette switcher */
+.pal{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:45;display:inline-flex;align-items:center;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:.15rem .3rem .15rem .85rem;box-shadow:0 8px 24px -10px rgba(24,39,61,.35);font-size:.8rem;color:var(--muted);transition:bottom .4s var(--ease-out)}
+.pal span{margin-right:.2rem}
+.pal button{width:44px;height:44px;border-radius:50%;position:relative}
+.pal button::before{content:"";position:absolute;inset:9px;border-radius:50%;background:linear-gradient(135deg,var(--a) 50%,var(--b) 50%)}
+.pal button::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1.5px solid transparent}
+.pal button[aria-pressed="true"]::after{border-color:var(--ink)}
+.pal [data-p="navy"]{--a:#18273D;--b:#E3A21A}
+.pal [data-p="forest"]{--a:#1E3A2F;--b:#C99A2E}
+.pal [data-p="copper"]{--a:#26384F;--b:#B9682F}
+body.bar-on .pal{bottom:calc(84px + env(safe-area-inset-bottom))}
+
+/* sticky bar on phone */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding:.65rem var(--gutter) calc(.65rem + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--page) 90%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .4s var(--ease-out)}
+.bar.show{transform:none}
+.bar .btn{min-height:50px;padding:.6rem .8rem}
+@media (min-width:960px){.bar{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero .stars .fg{animation:none;clip-path:none}
+  .hero .stars svg:nth-child(5) .fg{clip-path:inset(0 10% 0 0)}
+  .horizon .draw{animation:none;stroke-dashoffset:0}
+  .hero .proof{animation:none;opacity:1;transform:none}
+  .dist i::before{transition:none;transform:none}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+
+/* preview additions */
+.ribbon{background:var(--star);color:#1b1404;font-size:.84rem;font-weight:600;text-align:center;padding:.5rem var(--gutter)}
+.ph{border:1.5px dashed var(--line)!important;box-shadow:none!important}
+.ph blockquote{color:var(--muted)}
+.tag{display:inline-block;font-size:.75rem;font-weight:650;letter-spacing:.04em;text-transform:uppercase;color:var(--star-ink);background:var(--star-soft);border-radius:999px;padding:.2rem .6rem}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:var(--space-m)}
+.shots div{aspect-ratio:4/3;border-radius:var(--radius);border:1.5px dashed var(--line);background:var(--wash);display:grid;place-content:center;text-align:center;color:var(--muted);font-size:var(--step--1);padding:1rem}
+.shots div:first-child{grid-column:1/-1;aspect-ratio:16/9}
+.shots b{display:block;color:var(--ink)}
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="star" d="M10 1.6l2.47 5.3 5.8.68-4.29 3.96 1.15 5.73L10 14.4l-5.13 2.87 1.15-5.73L1.73 7.58l5.8-.68z"/>
+  </defs>
+</svg>
+
 <div class="ribbon">Site preview built for Boss Made Kustomz. Not live yet.</div>
 
-<div class="wrap">
-  <header class="top">
-    <a class="brand" href="#top">Boss Made <span>Kustomz</span></a>
-    <a class="num" href="tel:+18063172197">806-317-2197</a>
-  </header>
-</div>
-
-<main id="top">
-  <div class="wrap hero">
-    <span class="kicker">Mobile car wash · Lubbock, TX</span>
-    <h1>We pull up.<br><em>You stay put.</em></h1>
-    <p class="lede"><b>Boss Made Kustomz</b> washes your car at your house or your job. No line, no drive, no wasted Saturday.</p>
-    <div class="cta">
-      <a class="btn solid" href="sms:+18063172197?&body=Hey%2C%20I%20want%20to%20book%20a%20wash.">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
-        Text to book
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#main" aria-label="Boss Made Kustomz, home">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="var(--ink)"/><path d="M5 25.5h24" fill="none" stroke="var(--page)" stroke-width="1.6" stroke-linecap="round" opacity=".55"/><path d="M17 6c4 5 6.5 8 6.5 11.5a6.5 6.5 0 0 1-13 0C10.5 14 13 11 17 6z" fill="var(--star)"/></svg>
+      <span><b>Boss Made Kustomz</b><small>Mobile car wash · Lubbock, Texas</small></span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#services">Washes</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#area">Where we come</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="actions">
+      <a class="call-top" href="tel:+18063172197" aria-label="Call (806) 317-2197">
+        <svg class="i i-call" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+        <span class="word">Call</span><span class="num">(806) 317-2197</span>
       </a>
-      <a class="btn line" href="tel:+18063172197">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
-        Call Frank
-      </a>
+      <a class="btn" href="#book">Book a wash</a>
     </div>
-    <div class="price" aria-label="Washes from 25 dollars">Washes from<b>$25</b></div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap hero-grid">
+      <div class="copy">
+        <h1 id="h1">The car wash that comes to your driveway.</h1>
+        <p class="lede">Frank Austin and Boss Made Kustomz wash your car at your house or your job in Lubbock. Washes start at $25.</p>
+        <div class="cta">
+          <a class="btn" href="sms:+18063172197?&body=Hey%20Frank%2C%20I%20want%20to%20book%20a%20wash." id="heroBook">Text to book</a>
+          <a class="btn line" href="tel:+18063172197">
+            <svg class="i i-call" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+            <span class="lg">Call (806) 317-2197</span><span class="sm">Call Frank</span>
+          </a>
+        </div>
+      </div>
+
+      <figure class="proof" style="margin:0" aria-label="Spot for a customer review">
+        <div class="under" aria-hidden="true"></div>
+        <div class="card ph">
+          <div class="who"><span class="av" aria-hidden="true">★</span><div><b>Your best review</b><span>Lubbock</span></div></div>
+          <div class="meta">
+            <span class="stars" aria-hidden="true"><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg></span>
+            <span class="tag">Placeholder</span>
+          </div>
+          <blockquote>Frank, the review you're proudest of goes right here, word for word, with the customer's first name. It's the first thing people read.</blockquote>
+          <p class="job"><span>Job: <b>mobile wash</b></span><span>on Google</span></p>
+        </div>
+      </figure>
+    </div>
+
+    <svg class="horizon" viewBox="0 0 1200 90" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <circle class="sun" cx="300" cy="40" r="9"/>
+      <path class="land draw" style="--len:1400" d="M0 74 H360 C382 74 392 62 412 60 H520 C540 60 548 74 570 74 H1200"/>
+      <path class="land" d="M150 74 L146 34 M154 74 L150 34 M147 52 h6 M150 34 l-12 -8 M150 34 l12 -8 M150 34 l-8 12 M150 34 l10 10 M150 34 h-4 l4 -2"/>
+    </svg>
+  </section>
+
+  <div class="trust">
+    <ul class="wrap" aria-label="The short version">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 16.5V11l2-5h9l3 5h3v5.5M7 16.5h8"/><circle cx="6" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg><div><b>Mobile</b><span>We come to your home or work</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h9l3.5 3.5v13.5H6z"/><path d="M14.5 3.5V7.5H18.5M9 12h6M9 15.5h6M9 8.5h3"/></svg><div><b>From $25</b><span>Price up front, before we start</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 5h15v11h-9l-4 3.5V16h-2z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg><div><b>Book by text</b><span>One tap from this page</span></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s6.5-6 6.5-11a6.5 6.5 0 0 0-13 0C5.5 15 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/></svg><div><b>Lubbock</b><span>Local, owner on every job</span></div></li>
+    </ul>
   </div>
 
-  <div class="tape" aria-hidden="true"></div>
-
-  <section>
-    <div class="wrap">
-      <h2>How it works</h2>
-      <p class="sub">Three steps. Most people book in one text.</p>
-      <ol class="steps">
-        <li><b>Text or call</b><span>Tell us what you drive and what it needs.</span></li>
-        <li><b>Pick a time and a spot</b><span>Driveway, apartment lot, or your job.</span></li>
-        <li><b>We pull up and wash</b><span>You keep doing what you were doing.</span></li>
-      </ol>
+  <section class="wrap" id="services" aria-labelledby="h-svc">
+    <div class="head split">
+      <h2 id="h-svc">Pick your wash</h2>
+      <p>Clear packages and prices on one page, so nobody has to message you asking how much.</p>
+    </div>
+    <ul class="svc">
+      <li>
+        <h3>Mobile wash</h3>
+        <p>The wash you already post about, done right where the car is parked.</p>
+        <p class="price"><b>From $25</b></p>
+      </li>
+      <li>
+        <h3>Inside and out</h3>
+        <p>Sample package. The wash plus the interior.</p>
+        <p class="price"><b>Your price</b> goes here</p>
+      </li>
+      <li>
+        <h3>Full detail</h3>
+        <p>Sample package. The works, for when it's been a while.</p>
+        <p class="price"><b>Your price</b> goes here</p>
+      </li>
+    </ul>
+    <div class="svc-foot">
+      <p><strong>Frank:</strong> only the $25 wash is from your post. Send me your real packages and prices and they go in the same day.</p>
+      <p><strong>Trucks, SUVs, more than one car?</strong> Text what you drive and get a price back.</p>
     </div>
   </section>
 
-  <section style="padding-top:0">
+  <section class="reviews" id="reviews" aria-labelledby="h-rv">
     <div class="wrap">
-      <h2>The menu</h2>
-      <p class="sub">Clear packages so nobody has to message you asking "how much."</p>
-      <div class="menu">
-        <div class="item"><h3>Mobile wash</h3><span class="p">From $25</span><p>The wash you already post about, done where the car is parked.</p></div>
-        <div class="item"><h3>Inside and out</h3><span class="p tbd">Your price</span><p>Sample package. Wash plus the interior.</p></div>
-        <div class="item"><h3>Full detail</h3><span class="p tbd">Your price</span><p>Sample package. The works, for when it has been a while.</p></div>
+      <div class="summary">
+        <h2 id="h-rv">What customers say after we leave</h2>
+        <p style="color:var(--muted);margin-top:var(--space-s)">This section pulls in your real Google reviews. I didn't write any for you, so these are empty spots until you send them or set up your Google page.</p>
       </div>
-      <p class="note">Frank: the last two are placeholders. Send me your real packages and prices and they go in the same day.</p>
-    </div>
-  </section>
 
-  <section style="padding-top:0">
-    <div class="wrap">
-      <h2>The work</h2>
-      <p class="sub">Your before and afters sell this better than any words. They go right here.</p>
-      <div class="shots">
-        <div class="shot"><div><b>Your best before / after</b>Photo goes here</div></div>
-        <div class="shot"><div><b>Your photo</b>Goes here</div></div>
-        <div class="shot"><div><b>Your photo</b>Goes here</div></div>
+      <div class="rv" id="rv">
+        <article class="card ph">
+          <div class="who"><span class="av" aria-hidden="true">★</span><div><b>Customer review</b><span>Lubbock</span></div></div>
+          <div class="meta"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg></span><span class="tag">Placeholder</span></div>
+          <blockquote>A real review from one of your customers goes here.</blockquote>
+          <p class="job"><span>Job: <b>mobile wash</b></span></p>
+        </article>
+        <article class="card ph">
+          <div class="who"><span class="av" aria-hidden="true">★</span><div><b>Customer review</b><span>Lubbock</span></div></div>
+          <div class="meta"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg></span><span class="tag">Placeholder</span></div>
+          <blockquote>Another one here. Three is plenty to start.</blockquote>
+          <p class="job"><span>Job: <b>mobile wash</b></span></p>
+        </article>
+        <article class="card ph">
+          <div class="who"><span class="av" aria-hidden="true">★</span><div><b>Customer review</b><span>Lubbock</span></div></div>
+          <div class="meta"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg><svg viewBox="0 0 20 19"><use href="#star" class="bg"/></svg></span><span class="tag">Placeholder</span></div>
+          <blockquote>And a third. New ones get added as they come in.</blockquote>
+          <p class="job"><span>Job: <b>mobile wash</b></span></p>
+        </article>
+      </div>
+      <div class="shots" aria-label="Photo spots">
+        <div><span><b>Your best before and after</b>Photo goes here</span></div>
+        <div><span><b>Your photo</b>Goes here</span></div>
+        <div><span><b>Your photo</b>Goes here</span></div>
       </div>
     </div>
   </section>
 
-  <section class="area">
-    <div class="wrap">
+  <section class="wrap" id="about" aria-labelledby="h-about">
+    <div class="owner">
       <div>
-        <h2>Lubbock, we come to you</h2>
-        <p class="sub" style="margin-bottom:0">One link to drop in every post, so people can book without scrolling back to find your number.</p>
+        <div class="portrait">
+          <svg class="mono" viewBox="0 0 104 104" aria-hidden="true">
+            <circle cx="52" cy="52" r="51" fill="var(--wash)"/>
+            <circle cx="52" cy="52" r="44" fill="none" stroke="var(--star)" stroke-width="1.5" stroke-dasharray="2 4" stroke-linecap="round"/>
+            <circle cx="52" cy="52" r="36" fill="var(--ink)"/>
+            <text x="52" y="60" text-anchor="middle" fill="var(--page)" font-family="Archivo, Arial, sans-serif" font-size="24" font-weight="650" style="font-variation-settings:'wdth' 120" letter-spacing=".5">FA</text>
+          </svg>
+          <div><b>Frank Austin</b><span>Owner, Boss Made Kustomz<br>Lubbock</span></div>
+        </div>
+        <h2 id="h-about" style="margin-top:var(--space-m)">You'll text Frank, not a call center.</h2>
+        <div class="note" style="margin-top:var(--space-m)">
+          <p><span class="tag">Placeholder</span></p>
+          <p>Frank, two or three sentences from you go here: how you got started and what you won't cut corners on. People hire the person, so this part is yours to write.</p>
+          <p class="sig">Frank</p>
+        </div>
       </div>
-      <ul class="facts">
-        <li><span><b>Mobile.</b> Home, work, wherever the car is.</span></li>
-        <li><span><b>Washes from $25.</b></span></li>
-        <li><span><b>Book by text.</b> One tap from this page.</span></li>
-        <li><span><b>Shows up on Google</b> when someone searches mobile car wash in Lubbock.</span></li>
+      <div class="side">
+        <h3>How it works</h3>
+        <ol class="steps">
+          <li><div><b>Text or call</b><p>Say what you drive and what it needs.</p></div></li>
+          <li><div><b>Pick a time and a spot</b><p>Driveway, apartment lot, or your job.</p></div></li>
+          <li><div><b>We pull up and wash</b><p>You keep doing what you were doing.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="area" aria-labelledby="h-area" style="padding-top:0">
+    <div class="area">
+      <div class="head" style="margin-bottom:0">
+        <h2 id="h-area">Where we come</h2>
+        <p class="hoods">Anywhere in <strong>Lubbock</strong>. Home, apartment, or the lot at your job.</p>
+        <p class="hoods">Outside Lubbock? Text and ask.</p>
+      </div>
+      <ul class="towns">
+        <li>Lubbock<span>every neighborhood</span></li>
+        <li>Nearby towns<span>Frank, tell me which</span></li>
       </ul>
     </div>
   </section>
 
-  <section class="book">
-    <div class="wrap">
-      <h2>Get it clean</h2>
-      <a class="big" href="tel:+18063172197">806-317-2197</a>
-      <p>Call or text Frank at Boss Made Kustomz.</p>
+  <section class="wrap" id="faq" aria-labelledby="h-faq" style="padding-top:0">
+    <div class="faqwrap"><div class="head"><h2 id="h-faq">Questions people ask</h2><p>Anything else, text Frank.</p></div>
+    <div class="faq">
+      <details>
+        <summary>How do I book?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <div class="a"><p>Text or call (806) 317-2197 with what you drive and where it's parked. The button on this page starts the text for you.</p></div>
+      </details>
+      <details>
+        <summary>How much is it?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <div class="a"><p>Washes start at $25. The full price list goes here once Frank sends it.</p></div>
+      </details>
+      <details>
+        <summary>Where do you come?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <div class="a"><p>Anywhere in Lubbock. For somewhere outside town, text and ask.</p></div>
+      </details>
+    </div></div>
+  </section>
+
+  <section class="wrap" id="book" aria-labelledby="h-book" style="padding-top:0">
+    <div class="book">
+      <div class="intro">
+        <h2 id="h-book">Book a wash</h2>
+        <p>Fill this in and it opens a text to Frank with everything already typed. In a hurry? Call <a href="tel:+18063172197">(806) 317-2197</a>.</p>
+        <div class="hours">
+          <span>Hours go here once Frank sends them</span>
+        </div>
+      </div>
+      <div id="formWrap">
+        <form id="bookForm" novalidate>
+          <label>Your name
+            <input name="name" autocomplete="name" required maxlength="80" aria-describedby="e-name">
+            <span class="err" id="e-name" aria-live="polite"></span>
+          </label>
+          <label>What do you drive?
+            <input name="car" required maxlength="80" placeholder="2019 Silverado" aria-describedby="e-car">
+            <span class="err" id="e-car" aria-live="polite"></span>
+          </label>
+          <label>When and where? <small>A sentence is plenty</small>
+            <textarea name="msg" required maxlength="500" placeholder="Saturday morning, my driveway off 82nd" aria-describedby="e-msg"></textarea>
+            <span class="err" id="e-msg" aria-live="polite"></span>
+          </label>
+          <button class="btn" type="submit">Text Frank</button>
+          <p class="fine">Nothing is saved on this page. It only opens your texting app.</p>
+        </form>
+        <div class="thanks" role="status" aria-live="polite" tabindex="-1" id="thanks">
+          <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--star-ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div>
+          <h3>Almost done</h3>
+          <p id="thanksMsg">Your texting app should be open. Hit send and Frank will get back to you.</p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 
-<footer>
-  <div class="wrap">Preview by Mills Yamoah, Simply AI Solutions · <a href="https://simplyaitx.com">simplyaitx.com</a> · <a href="tel:+12148430157">(214) 843-0157</a></div>
+<footer class="wrap">
+  <div class="row">
+    <div>
+      <a class="brand" href="#main">
+        <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="var(--ink)"/><path d="M5 25.5h24" fill="none" stroke="var(--page)" stroke-width="1.6" stroke-linecap="round" opacity=".55"/><path d="M17 6c4 5 6.5 8 6.5 11.5a6.5 6.5 0 0 1-13 0C10.5 14 13 11 17 6z" fill="var(--star)"/></svg>
+        <span><b>Boss Made Kustomz</b></span>
+      </a>
+      <p style="margin-top:.6rem">Mobile car wash, Lubbock, Texas.</p>
+    </div>
+    <p><a href="tel:+18063172197">(806) 317-2197</a><br>Call or text</p>
+    <p>Site preview by Mills Yamoah, Simply AI Solutions. Not live yet. <a href="https://simplyaitx.com">simplyaitx.com</a> · <a href="tel:+12148430157">(214) 843-0157</a></p>
+  </div>
 </footer>
 
-<div class="bar">
-  <a class="btn solid" href="sms:+18063172197?&body=Hey%2C%20I%20want%20to%20book%20a%20wash.">Text to book</a>
-  <a class="btn line" href="tel:+18063172197">Call</a>
+<div class="pal" role="group" aria-label="Colors">
+  <span>Colors</span>
+  <button type="button" data-p="navy" aria-pressed="true" aria-label="Navy and gold"></button>
+  <button type="button" data-p="forest" aria-pressed="false" aria-label="Forest and brass"></button>
+  <button type="button" data-p="copper" aria-pressed="false" aria-label="Slate and copper"></button>
 </div>
 
+<div class="bar" id="bar" aria-hidden="true">
+  <a class="btn line" href="tel:+18063172197" tabindex="-1" aria-label="Call"><svg class="i i-call" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>Call</a>
+  <a class="btn" href="sms:+18063172197?&body=Hey%20Frank%2C%20I%20want%20to%20book%20a%20wash." tabindex="-1">Text to book</a>
+</div>
+
+<script>
+(function(){
+  var SMS_TO='+18063172197';
+  var root=document.documentElement;
+  var pb=document.querySelectorAll('.pal button');
+  var ok={navy:1,forest:1,copper:1};
+  function setP(n){
+    if(!ok[n])return;
+    root.setAttribute('data-palette',n);
+    pb.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.p===n));});
+    try{localStorage.setItem('bmk-palette',n);}catch(e){}
+  }
+  pb.forEach(function(b){b.addEventListener('click',function(){setP(b.dataset.p);});});
+  try{var s=localStorage.getItem('bmk-palette');if(s)setP(s);}catch(e){}
+
+  var top=document.getElementById('top');
+  addEventListener('scroll',function(){top.classList.toggle('scrolled',scrollY>8);},{passive:true});
+
+  var bar=document.getElementById('bar'),hero=document.getElementById('heroBook'),book=document.getElementById('book');
+  if('IntersectionObserver' in window){
+    var heroOut=false,bookIn=false;
+    function upd(){
+      var on=heroOut&&!bookIn;
+      bar.classList.toggle('show',on);document.body.classList.toggle('bar-on',on);
+      bar.setAttribute('aria-hidden',String(!on));
+      bar.querySelectorAll('a').forEach(function(a){a.tabIndex=on?0:-1;});
+    }
+    new IntersectionObserver(function(e){heroOut=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;upd();}).observe(hero);
+    new IntersectionObserver(function(e){bookIn=e[0].isIntersecting;upd();},{threshold:.15}).observe(book);
+  }
+
+  var f=document.getElementById('bookForm'),F=f.elements,wrap=document.getElementById('formWrap');
+  function setErr(el,msg){el.setAttribute('aria-invalid',msg?'true':'false');document.getElementById(el.getAttribute('aria-describedby')).textContent=msg;}
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var n=F['name'].value.trim().slice(0,80),c=F['car'].value.trim().slice(0,80),m=F['msg'].value.trim().slice(0,500),bad=null;
+    setErr(F['name'],n?'':'Add your name so Frank knows who is texting.'); if(!n)bad=bad||F['name'];
+    setErr(F['car'],c?'':'Tell Frank what you drive.'); if(!c)bad=bad||F['car'];
+    setErr(F['msg'],m?'':'Add a day and a place.'); if(!m)bad=bad||F['msg'];
+    if(bad){bad.focus();return;}
+    var text='Hey Frank, this is '+n+'. I want to book a wash for my '+c+'. '+m;
+    wrap.classList.add('sent');
+    document.getElementById('thanks').focus();
+    location.href='sms:'+SMS_TO+'?&body='+encodeURIComponent(text);
+  });
+})();
+</script>
 </body>
 </html>
